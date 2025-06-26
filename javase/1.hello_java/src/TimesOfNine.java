@@ -1,3 +1,4 @@
+
 public class TimesOfNine {
     public static void main(String[] args) {
         int times = 0;
@@ -12,4 +13,6 @@ public class TimesOfNine {
         }
         System.out.println(times);
     }
+
+
 }
