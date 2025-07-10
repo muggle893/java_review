@@ -106,6 +106,9 @@ public class MyArraylist {
 
     // 获取 pos 位置的元素
     public int get(int pos) {
+        if (isEmpty()) {
+            throw new RuntimeException("顺序表为空，不能获取元素！");
+        }
         if (!checkPosInAdd(pos)) {
             throw new ArrayPosException("参数的pos越界,pos= " + pos);
         }
@@ -134,6 +137,9 @@ public class MyArraylist {
      */
     public void remove(int key) {
         int index = indexOf(key);
+        if (isEmpty()) {
+            throw new RuntimeException("顺序表为空，不能删除元素！");
+        }
         if (index != -1) {
             for (int i = index; i < usedSize - 1; i++) {
                 elem[i] = elem[i + 1];
