@@ -1,4 +1,4 @@
-package tree.code_2025_7_25;
+package sort.code_2025_7_28;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.Arrays;
@@ -49,12 +49,125 @@ public class Sort {
         selectSort(randomArray);
         System.out.println("排序后：" + Arrays.toString(randomArray));
 
-        randomArray = getRandomArray(5);
+        randomArray = getRandomArray(20);
+        System.out.println("冒泡排序测试：");
+        System.out.println("排序前：" + Arrays.toString(randomArray));
+        bubbleSort(randomArray);
+        System.out.println("排序后：" + Arrays.toString(randomArray));
+
+        randomArray = new int[]{110, 100, 0};
         System.out.println("快速排序测试：");
         System.out.println("排序前：" + Arrays.toString(randomArray));
         quickSort(randomArray);
         System.out.println("排序后：" + Arrays.toString(randomArray));
+
+        randomArray = getRandomArray(20);
+        System.out.println("归并排序测试：");
+        System.out.println("排序前：" + Arrays.toString(randomArray));
+        mergeSort(randomArray);
+        System.out.println("排序后：" + Arrays.toString(randomArray));
+
+        randomArray = getRandomArray(20);
+        System.out.println("归并排序非递归算法测试：");
+        System.out.println("排序前：" + Arrays.toString(randomArray));
+        mergeSortNoRecusion(randomArray);
+        System.out.println("排序后：" + Arrays.toString(randomArray));
+
+        randomArray = new int[]{-1, 8, -3, 9, 100};
+        System.out.println("计数排序算法测试：");
+        System.out.println("排序前：" + Arrays.toString(randomArray));
+        countSort(randomArray);
+        System.out.println("排序后：" + Arrays.toString(randomArray));
     }
+
+    // 归并排序---递归
+    public static void mergeSort(int[] array){
+        mergeSort2(array, 0, array.length - 1);
+    }
+    public static void mergeSort2(int[] array, int left, int right){
+        if (left >= right) {
+            return;
+        }
+        int mid = left + ((right - left + 1) >> 1);
+        mergeSort2(array, left, mid - 1);
+        mergeSort2(array, mid, right);
+        merge(array, left, mid, right);
+    }
+    /**
+     * 左边区间为left~mid-1, 右边区间为mid~right
+     * 合并数组中的两个区间
+     * @param nums
+     * @param left
+     * @param mid
+     * @param right
+     */
+    private static void merge(int[] nums, int left, int mid, int right) {
+        int[] arr = Arrays.copyOfRange(nums, left, right + 1);
+        int i = 0, j = (mid - left), k = left;
+        while (i < (mid-left) && j < arr.length) {
+            if (arr[i] < arr[j]) {
+                nums[k++] = arr[i++];
+            } else {
+                nums[k++] = arr[j++];
+            }
+        }
+        while (i < (mid-left)) {
+            nums[k++] = arr[i++];
+        }
+        while (j < arr.length) {
+            nums[k++] = arr[j++];
+        }
+    }
+
+    // 归并排序---非递归
+    public static void mergeSortNoRecusion(int[] array){
+        // write code  here
+        int gap = 1;
+        while (gap < array.length) {
+            int left = 0;
+            int mid = left + gap;
+            int right = left + (gap * 2 - 1);
+            while (left < array.length && mid < array.length &&  left < mid) {
+                if (right > array.length) {
+                    right = array.length - 1;
+                }
+                merge(array, left, mid, right);
+                // 更新变量，合并下一组
+                left = right + 1;
+                mid = left + gap;
+                right = left + (gap * 2 - 1);
+            }
+            gap *= 2;
+        }
+    }
+
+    // 计数排序
+    public static void countSort(int[] array){
+        // 1.先找最大和最小值，以便确定区间
+        int minNum = Integer.MAX_VALUE;
+        int maxNum = Integer.MIN_VALUE;
+        for (int n : array) {
+            minNum = Math.min(minNum, n);
+            maxNum = Math.max(maxNum, n);
+        }
+
+        // 2.计数
+        int[] map = new int[maxNum - minNum + 1];
+        for (int i = 0; i < array.length; i++) {
+            int index = array[i] - minNum;
+            map[index]++;
+        }
+
+        // 3.排序
+        int i = 0, j = 0; // i是map中的索引，j是array中的索引
+        for(; i < map.length; i++) {
+            while (map[i] > 0) {
+                array[j++] = minNum + i;
+                map[i]--;
+            }
+        }
+    }
+
 
     // 插入排序
     public static void insertSort(int[] array){
@@ -185,7 +298,7 @@ public class Sort {
     public static void bubbleSort(int[] array){
         for (int i = 0; i < array.length - 1; i++) {
             boolean exchanged = false;
-            for (int j = 0; j < array.length - i; j++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
                     swap(array, j, j + 1);
                     exchanged = true;
