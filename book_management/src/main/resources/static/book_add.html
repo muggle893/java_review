@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加图书</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/add.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-inline">
+            <h2 style="text-align: left; margin-left: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="40"
+                    fill="#17a2b8" class="bi bi-book-half" viewBox="0 0 16 16">
+                    <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+                <span>添加图书</span>
+            </h2>
+        </div>
+
+        <form id="addBook">
+            <div class="form-group">
+                <label for="bookName">图书名称:</label>
+                <input type="text" class="form-control" placeholder="请输入图书名称" id="bookName" name="bookName">
+            </div>
+            <div class="form-group">
+                <label for="bookAuthor">图书作者</label>
+                <input type="text" class="form-control" placeholder="请输入图书作者" id="bookAuthor" name="author" />
+            </div>
+            <div class="form-group">
+                <label for="bookStock">图书库存</label>
+                <input type="text" class="form-control" placeholder="请输入图书库存" id="bookStock" name="count"/>
+            </div>
+
+            <div class="form-group">
+                <label for="bookPrice">图书定价：</label>
+                <input type="number" class="form-control" placeholder="请输入价格" id="bookPrice" name="price">
+            </div>
+
+            <div class="form-group">
+                <label for="bookPublisher">出版社</label>
+                <input type="text" id="bookPublisher" class="form-control" placeholder="请输入图书出版社" name="publish" />
+            </div>
+            <div class="form-group">
+                <label for="bookStatus">图书状态</label>
+                <select class="custom-select" id="bookStatus" name="status">
+                    <option value="1" selected>可借阅</option>
+                    <option value="2">不可借阅</option>
+                </select>
+            </div>
+
+            <div class="form-group" style="text-align: right">
+                <button type="button" class="btn btn-info btn-lg" onclick="add()">确定</button>
+                <button type="button" class="btn btn-secondary btn-lg" onclick="javascript:history.back()">返回</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>
+        function add() {
+            // 得到图书的信息, 这里只限定图书的名字不能为空
+            // 校验
+            console.log("① 进入 add，版本：0911");
+            console.log("jQuery 是否加载：", typeof window.jQuery);
+            var bookName = $("#bookName").val().trim()
+            var bookAuthor = $("#bookAuthor").val().trim()
+            var bookStock = $("#bookStock").val().trim()
+            var bookPrice = $("#bookPrice").val().trim()
+            var publish = $("#bookPublisher").val().trim();
+            var bookStatus = Number($("#bookStatus").val());
+            if (bookName.length === 0) {
+                alert("图书的名字不能为空！！！")
+                return
+            }
+            if (bookAuthor.length === 0) {
+                alert("图书作者不能为空!!!")
+                return
+            }
+            if (bookStock.length === 0) {
+                alert("图书库存不能为空!!!")
+                return;
+            } else {
+                bookStock = Number(bookStock)
+                if (Number(bookStock) < 0) {
+                    alert("图书库存不能小于0！！！")
+                    return
+                }
+            }
+            if (bookPrice.length === 0) {
+                alert("图书价格不能为空！！")
+            } else {
+                bookPrice = Number(bookPrice)
+                if (Number(bookPrice) < 0) {
+                    alert("图书价格不能为负数！！！")
+                    return
+                }
+            }
+
+            if (publish.length === 0) {
+                alert("出版社不能空！！！")
+                return
+            }
+
+            // 发送请求到后端
+            console.log("② 准备发送请求", {
+                url: new URL("/book/addBook", location.href).href,
+                bookName: bookName,
+                author: bookAuthor,
+                price: bookPrice,
+                count: bookStock,
+                publish: publish,
+                status: bookStatus
+            });
+            $.ajax({
+                url:"/book/addBook",
+                type:"POST",
+                data:{
+                    bookName : bookName,
+                    author : bookAuthor,
+                    price : bookPrice,
+                    count : bookStock,
+                    publish: publish,
+                    status: bookStatus
+                },
+                success: function(ret) {
+                    if (ret.code == 200) {
+                        alert("添加成功");
+                        location.href = "book_list.html";
+                    } else {
+                        alert(ret.message)
+                    }
+                },
+                error: function (xhr, textStatus, errorThrown) {
+                    console.error("添加图书请求异常：", {
+                        status: xhr.status,
+                        type: textStatus,
+                        error: errorThrown,
+                        response: xhr.responseText
+                    });
+
+                    if (textStatus === "timeout") {
+                        alert("请求超时，请先查看图书列表确认是否已添加");
+                    } else if (textStatus === "parsererror") {
+                        alert("服务器返回的数据不是有效的 JSON");
+                    } else if (xhr.status === 400) {
+                        alert("请求参数有误，请检查输入内容");
+                    } else if (xhr.status === 404) {
+                        alert("接口不存在，请检查请求地址");
+                    } else if (xhr.status >= 500) {
+                        alert("服务器处理异常，请查看后端日志");
+                    } else if (xhr.status === 0) {
+                        alert("未收到有效响应，请检查网络或后端服务");
+                    } else {
+                        alert("请求失败，HTTP 状态码：" + xhr.status);
+                    }
+                }
+            })
+
+        }
+    </script>
+</body>
+
+</html>

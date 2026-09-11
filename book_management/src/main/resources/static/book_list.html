@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书列表展示</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/list.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/jq-paginator.js"></script>
+
+</head>
+
+<body>
+    <div class="bookContainer">
+        <h2>图书列表展示</h2>
+        <div class="navbar-justify-between">
+            <div>
+                <button class="btn btn-outline-info" type="button" onclick="location.href='book_add.html'">添加图书</button>
+                <button class="btn btn-outline-info" type="button" onclick="batchDelete()">批量删除</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>选择</td>
+                    <td class="width100">图书ID</td>
+                    <td>书名</td>
+                    <td>作者</td>
+                    <td>数量</td>
+                    <td>定价</td>
+                    <td>出版社</td>
+                    <td>状态</td>
+                    <td class="width200">操作</td>
+                </tr>
+            </thead>
+            <tbody id="bookList">
+            </tbody>
+        </table>
+
+        <div class="demo">
+            <ul id="pageContainer" class="pagination justify-content-center"></ul>
+        </div>
+        <script>
+            // 页面 DOM 加载完成后，自动请求图书列表
+            $(function () {
+                getBookList();
+            });
+
+            function getBookList() {
+                showTableMessage("正在加载图书...");
+                $("#pageContainer").hide();
+
+                const params = new URLSearchParams(location.search);
+                const pageSize = 10;
+                let currentPage = Number(params.get("currentPage"));
+
+                // 默认查询第一页
+                if (!Number.isSafeInteger(currentPage) || currentPage < 1) {
+                    currentPage = 1;
+                }
+
+                $.ajax({
+                    url: "/book/getListByPage",
+                    type: "GET",
+                    data: {
+                        currentPage: currentPage,
+                        pageSize: pageSize
+                    },
+                    dataType: "json",
+                    timeout: 10000,
+
+                    success: function (result) {
+                        // 返回的是对象，records 才是图书数组
+                        if (!result || !Array.isArray(result.records)) {
+                            showTableMessage("图书数据格式异常");
+                            return;
+                        }
+
+                        const books = result.records;
+                        const totalCount = Number(result.count);
+
+                        // 页码超过最后一页时，跳回最后一页
+                        if (Number.isSafeInteger(totalCount) && totalCount > 0) {
+                            const lastPage = Math.ceil(totalCount / pageSize);
+
+                            if (currentPage > lastPage) {
+                                const url = new URL(location.href);
+                                url.searchParams.set("currentPage", lastPage);
+                                location.replace(url.href);
+                                return;
+                            }
+                        }
+
+                        const tbody = $("#bookList");
+                        tbody.empty();
+
+                        if (books.length === 0) {
+                            showTableMessage("当前页暂无图书");
+                        }
+
+                        const statusMap = {
+                            0: "无效",
+                            1: "可借阅",
+                            2: "不可借阅"
+                        };
+
+                        // 这里只负责生成表格行
+                        $.each(books, function (index, book) {
+                            const tr = $("<tr>");
+
+                            const checkbox = $("<input>")
+                                .attr("type", "checkbox")
+                                .attr("name", "selectBook")
+                                .addClass("book-select")
+                                .val(book.id);
+
+                            tr.append($("<td>").append(checkbox));
+
+                            // 优先使用后端返回的中文状态 statusCN
+                            const statusText = book.statusCN
+                                || statusMap[book.status]
+                                || "未知状态";
+
+                            const priceText = book.price == null
+                                ? ""
+                                : Number(book.price).toFixed(2);
+
+                            const values = [
+                                book.id,
+                                book.bookName,
+                                book.author,
+                                book.count,
+                                priceText,
+                                book.publish,
+                                statusText
+                            ];
+
+                            $.each(values, function (i, value) {
+                                tr.append(
+                                    $("<td>").text(value == null ? "" : value)
+                                );
+                            });
+
+                            const updateLink = $("<a>")
+                                .attr(
+                                    "href",
+                                    "book_update.html?bookId=" + encodeURIComponent(book.id)
+                                    + "&currentPage=" + currentPage
+                                )
+                                .text("修改");
+
+                            const deleteLink = $("<a>")
+                                .attr("href", "#")
+                                .text("删除")
+                                .on("click", function (event) {
+                                    event.preventDefault();
+                                    deleteBook(book.id);
+                                });
+
+                            const operations = $("<div>")
+                                .addClass("op")
+                                .append(updateLink)
+                                .append(" ")
+                                .append(deleteLink);
+
+                            tr.append($("<td>").append(operations));
+                            tbody.append(tr);
+                        });
+
+                        // 总数为 0 或异常时，不初始化分页；已返回的图书仍然展示
+                        if (!Number.isSafeInteger(totalCount) || totalCount <= 0) {
+                            if (books.length > 0) {
+                                console.warn("已有图书，但总数异常，请检查后端 count 的赋值");
+                            }
+                            return;
+                        }
+
+                        // 注意：分页组件放在 $.each 循环外
+                        $("#pageContainer").show().jqPaginator({
+                            totalCounts: totalCount, // 数据库总记录数
+                            pageSize: pageSize,
+                            visiblePages: 5,
+                            currentPage: currentPage,
+
+                            first: '<li class="page-item"><a class="page-link" href="javascript:void(0);">首页</a></li>',
+                            prev: '<li class="page-item"><a class="page-link" href="javascript:void(0);">上一页</a></li>',
+                            next: '<li class="page-item"><a class="page-link" href="javascript:void(0);">下一页</a></li>',
+                            last: '<li class="page-item"><a class="page-link" href="javascript:void(0);">最后一页</a></li>',
+                            page: '<li class="page-item"><a class="page-link" href="javascript:void(0);">{{page}}</a></li>',
+
+                            onPageChange: function (page, type) {
+                                // 只有点击翻页时才跳转，初始化时不跳转
+                                if (type === "change") {
+                                    const url = new URL(location.href);
+                                    url.searchParams.set("currentPage", page);
+                                    location.href = url.href;
+                                }
+                            }
+                        });
+                    },
+
+                    error: function (xhr, textStatus) {
+                        if (textStatus === "timeout") {
+                            showTableMessage("加载超时，请刷新页面重试");
+                        } else {
+                            showTableMessage("图书加载失败，请检查后端服务");
+                        }
+                    }
+                });
+            }
+
+            // 在表格中显示加载状态、空数据或错误提示
+            function showTableMessage(message) {
+                var td = $("<td>")
+                    .attr("colspan", 9)
+                    .text(message);
+
+                $("#bookList").empty().append(
+                    $("<tr>").append(td)
+                );
+            }
+
+            function deleteBook(id) {
+                var isDelete = confirm("确认删除?");
+                if (isDelete) {
+                    //删除图书
+                    alert("删除成功");
+                }
+            }
+            function batchDelete() {
+                var isDelete = confirm("确认批量删除?");
+                if (isDelete) {
+                    //获取复选框的id
+                    var ids = [];
+                    $("input:checkbox[name='selectBook']:checked").each(function () {
+                        ids.push($(this).val());
+                    });
+                    console.log(ids);
+                    alert("批量删除成功");
+                }
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
