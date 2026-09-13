@@ -1,374 +1,260 @@
-2026-09-11T07:19:04.481+08:00  INFO 6380 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 6380 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T07:19:04.488+08:00  INFO 6380 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T07:19:05.500+08:00  INFO 6380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2026-09-11T07:19:05.511+08:00  INFO 6380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T07:19:05.512+08:00  INFO 6380 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T07:19:05.595+08:00  INFO 6380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T07:19:05.596+08:00  INFO 6380 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1062 ms
-2026-09-11T07:19:05.644+08:00  INFO 6380 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T07:19:05.999+08:00  INFO 6380 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T07:19:06.416+08:00  INFO 6380 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T07:19:06.611+08:00  INFO 6380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2026-09-11T07:19:06.618+08:00  INFO 6380 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.671 seconds (process running for 3.738)
-2026-09-11T07:20:04.752+08:00  INFO 6380 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T07:20:04.755+08:00  INFO 6380 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T07:20:07.258+08:00  INFO 22816 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 22816 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T07:20:07.260+08:00  INFO 22816 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T07:20:07.999+08:00  INFO 22816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T07:20:08.009+08:00  INFO 22816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T07:20:08.009+08:00  INFO 22816 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T07:20:08.087+08:00  INFO 22816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T07:20:08.088+08:00  INFO 22816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 789 ms
-2026-09-11T07:20:08.134+08:00  INFO 22816 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T07:20:08.338+08:00  INFO 22816 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T07:20:08.599+08:00  INFO 22816 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T07:20:08.782+08:00  INFO 22816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T07:20:08.788+08:00  INFO 22816 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 1.917 seconds (process running for 2.413)
-2026-09-11T07:20:10.716+08:00  INFO 22816 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T07:20:10.716+08:00  INFO 22816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T07:20:10.717+08:00  INFO 22816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T07:20:58.113+08:00  WARN 22816 --- [http-nio-8080-exec-6] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.book_management.controller.UserController
-2026-09-11T07:52:10.468+08:00  INFO 22816 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T07:52:10.483+08:00  INFO 22816 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T07:53:30.872+08:00  INFO 24488 --- [main] o.t.book_management.dao.BookMapperTest   : Starting BookMapperTest using Java 17.0.5 with PID 24488 (started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T07:53:30.873+08:00 DEBUG 24488 --- [main] o.t.book_management.dao.BookMapperTest   : Running with Spring Boot v3.0.2, Spring v6.0.4
-2026-09-11T07:53:30.874+08:00  INFO 24488 --- [main] o.t.book_management.dao.BookMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T07:53:31.832+08:00  INFO 24488 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T07:53:32.161+08:00  INFO 24488 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T07:53:32.770+08:00  INFO 24488 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T07:53:32.944+08:00  INFO 24488 --- [main] o.t.book_management.dao.BookMapperTest   : Started BookMapperTest in 2.408 seconds (process running for 3.816)
-2026-09-11T07:53:33.638+08:00  INFO 24488 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T07:53:33.646+08:00  INFO 24488 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T07:54:34.472+08:00  INFO 26032 --- [main] o.t.book_management.dao.BookMapperTest   : Starting BookMapperTest using Java 17.0.5 with PID 26032 (started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T07:54:34.473+08:00 DEBUG 26032 --- [main] o.t.book_management.dao.BookMapperTest   : Running with Spring Boot v3.0.2, Spring v6.0.4
-2026-09-11T07:54:34.474+08:00  INFO 26032 --- [main] o.t.book_management.dao.BookMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T07:54:35.225+08:00  INFO 26032 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T07:54:35.521+08:00  INFO 26032 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T07:54:36.026+08:00  INFO 26032 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T07:54:36.207+08:00  INFO 26032 --- [main] o.t.book_management.dao.BookMapperTest   : Started BookMapperTest in 2.038 seconds (process running for 2.996)
-2026-09-11T07:54:36.770+08:00  INFO 26032 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T07:54:36.779+08:00  INFO 26032 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T07:55:51.175+08:00  INFO 24172 --- [main] o.t.book_management.dao.BookMapperTest   : Starting BookMapperTest using Java 17.0.5 with PID 24172 (started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T07:55:51.175+08:00 DEBUG 24172 --- [main] o.t.book_management.dao.BookMapperTest   : Running with Spring Boot v3.0.2, Spring v6.0.4
-2026-09-11T07:55:51.176+08:00  INFO 24172 --- [main] o.t.book_management.dao.BookMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T07:55:51.896+08:00  INFO 24172 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T07:55:52.190+08:00  INFO 24172 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T07:55:52.671+08:00  INFO 24172 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T07:55:52.840+08:00  INFO 24172 --- [main] o.t.book_management.dao.BookMapperTest   : Started BookMapperTest in 1.97 seconds (process running for 2.941)
-2026-09-11T07:55:53.399+08:00  INFO 24172 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T07:55:53.406+08:00  INFO 24172 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T07:56:08.192+08:00  INFO 23396 --- [main] o.t.book_management.dao.BookMapperTest   : Starting BookMapperTest using Java 17.0.5 with PID 23396 (started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T07:56:08.194+08:00 DEBUG 23396 --- [main] o.t.book_management.dao.BookMapperTest   : Running with Spring Boot v3.0.2, Spring v6.0.4
-2026-09-11T07:56:08.195+08:00  INFO 23396 --- [main] o.t.book_management.dao.BookMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T07:56:08.899+08:00  INFO 23396 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T07:56:09.198+08:00  INFO 23396 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T07:56:09.672+08:00  INFO 23396 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T07:56:09.842+08:00  INFO 23396 --- [main] o.t.book_management.dao.BookMapperTest   : Started BookMapperTest in 1.96 seconds (process running for 2.877)
-2026-09-11T07:56:10.373+08:00  INFO 23396 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T07:56:10.382+08:00  INFO 23396 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T07:57:06.547+08:00  INFO 15560 --- [main] o.t.book_management.dao.BookMapperTest   : Starting BookMapperTest using Java 17.0.5 with PID 15560 (started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T07:57:06.547+08:00 DEBUG 15560 --- [main] o.t.book_management.dao.BookMapperTest   : Running with Spring Boot v3.0.2, Spring v6.0.4
-2026-09-11T07:57:06.548+08:00  INFO 15560 --- [main] o.t.book_management.dao.BookMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T07:57:07.258+08:00  INFO 15560 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T07:57:07.559+08:00  INFO 15560 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T07:57:08.052+08:00  INFO 15560 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T07:57:08.228+08:00  INFO 15560 --- [main] o.t.book_management.dao.BookMapperTest   : Started BookMapperTest in 1.997 seconds (process running for 2.958)
-2026-09-11T07:57:08.814+08:00  INFO 15560 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T07:57:08.823+08:00  INFO 15560 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T08:30:22.076+08:00  INFO 19108 --- [main] o.t.book_management.dao.BookMapperTest   : Starting BookMapperTest using Java 17.0.5 with PID 19108 (started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T08:30:22.078+08:00 DEBUG 19108 --- [main] o.t.book_management.dao.BookMapperTest   : Running with Spring Boot v3.0.2, Spring v6.0.4
-2026-09-11T08:30:22.079+08:00  INFO 19108 --- [main] o.t.book_management.dao.BookMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T08:30:23.192+08:00  INFO 19108 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T08:30:23.627+08:00  INFO 19108 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T08:30:24.382+08:00  INFO 19108 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T08:30:24.666+08:00  INFO 19108 --- [main] o.t.book_management.dao.BookMapperTest   : Started BookMapperTest in 2.956 seconds (process running for 4.171)
-2026-09-11T08:30:25.613+08:00  INFO 19108 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T08:30:25.626+08:00  INFO 19108 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T08:32:37.252+08:00  INFO 26380 --- [main] o.t.book_management.dao.BookMapperTest   : Starting BookMapperTest using Java 17.0.5 with PID 26380 (started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T08:32:37.257+08:00 DEBUG 26380 --- [main] o.t.book_management.dao.BookMapperTest   : Running with Spring Boot v3.0.2, Spring v6.0.4
-2026-09-11T08:32:37.258+08:00  INFO 26380 --- [main] o.t.book_management.dao.BookMapperTest   : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T08:32:38.072+08:00  INFO 26380 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T08:32:38.395+08:00  INFO 26380 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T08:32:39.026+08:00  INFO 26380 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T08:32:39.336+08:00  INFO 26380 --- [main] o.t.book_management.dao.BookMapperTest   : Started BookMapperTest in 2.444 seconds (process running for 3.464)
-2026-09-11T08:32:40.378+08:00  INFO 26380 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T08:32:40.393+08:00  INFO 26380 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T08:33:20.025+08:00  INFO 4452 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 4452 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T08:33:20.028+08:00  INFO 4452 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T08:33:20.991+08:00  INFO 4452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T08:33:21.007+08:00  INFO 4452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T08:33:21.008+08:00  INFO 4452 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T08:33:21.098+08:00  INFO 4452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T08:33:21.098+08:00  INFO 4452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1032 ms
-2026-09-11T08:33:21.145+08:00  INFO 4452 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T08:33:21.363+08:00  INFO 4452 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T08:33:21.643+08:00  INFO 4452 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T08:33:21.790+08:00  INFO 4452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T08:33:21.796+08:00  INFO 4452 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.317 seconds (process running for 2.862)
-2026-09-11T08:33:29.337+08:00  INFO 4452 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T08:33:29.337+08:00  INFO 4452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T08:33:29.337+08:00  INFO 4452 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-11T08:33:34.465+08:00  INFO 4452 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T08:33:34.471+08:00  INFO 4452 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T09:14:03.783+08:00  INFO 25396 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 25396 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T09:14:03.788+08:00  INFO 25396 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T09:14:04.730+08:00  INFO 25396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T09:14:04.740+08:00  INFO 25396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T09:14:04.740+08:00  INFO 25396 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T09:14:04.823+08:00  INFO 25396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T09:14:04.823+08:00  INFO 25396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 986 ms
-2026-09-11T09:14:04.876+08:00  INFO 25396 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T09:14:05.111+08:00  INFO 25396 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T09:14:05.382+08:00  INFO 25396 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T09:14:05.525+08:00  INFO 25396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T09:14:05.532+08:00  INFO 25396 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.16 seconds (process running for 2.646)
-2026-09-11T09:14:35.970+08:00  INFO 25396 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T09:14:35.971+08:00  INFO 25396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T09:14:35.972+08:00  INFO 25396 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T09:17:05.845+08:00  INFO 25396 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T09:17:05.850+08:00  INFO 25396 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T09:17:46.365+08:00  INFO 26472 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 26472 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T09:17:46.368+08:00  INFO 26472 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T09:17:47.236+08:00  INFO 26472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T09:17:47.247+08:00  INFO 26472 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T09:17:47.247+08:00  INFO 26472 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T09:17:47.334+08:00  INFO 26472 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T09:17:47.334+08:00  INFO 26472 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 930 ms
-2026-09-11T09:17:47.406+08:00  INFO 26472 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T09:17:47.648+08:00  INFO 26472 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T09:17:47.976+08:00  INFO 26472 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T09:17:48.176+08:00  INFO 26472 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T09:17:48.185+08:00  INFO 26472 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.276 seconds (process running for 3.474)
-2026-09-11T09:17:55.644+08:00  INFO 26472 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T09:17:55.644+08:00  INFO 26472 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T09:17:55.645+08:00  INFO 26472 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T09:18:10.144+08:00  INFO 26472 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T09:18:10.149+08:00  INFO 26472 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T09:18:13.413+08:00  INFO 22932 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 22932 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T09:18:13.417+08:00  INFO 22932 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T09:18:14.352+08:00  INFO 22932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T09:18:14.361+08:00  INFO 22932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T09:18:14.362+08:00  INFO 22932 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T09:18:14.440+08:00  INFO 22932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T09:18:14.441+08:00  INFO 22932 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 986 ms
-2026-09-11T09:18:14.499+08:00  INFO 22932 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T09:18:14.736+08:00  INFO 22932 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T09:18:15.257+08:00  INFO 22932 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T09:18:15.451+08:00  INFO 22932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T09:18:15.463+08:00  INFO 22932 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.609 seconds (process running for 3.348)
-2026-09-11T09:18:39.094+08:00  INFO 22932 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T09:18:39.094+08:00  INFO 22932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T09:18:39.095+08:00  INFO 22932 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T09:19:08.802+08:00  INFO 22932 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T09:19:08.811+08:00  INFO 22932 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T09:20:59.645+08:00  INFO 2748 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 2748 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T09:20:59.649+08:00  INFO 2748 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T09:21:00.482+08:00  INFO 2748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T09:21:00.492+08:00  INFO 2748 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T09:21:00.492+08:00  INFO 2748 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T09:21:00.570+08:00  INFO 2748 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T09:21:00.570+08:00  INFO 2748 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 882 ms
-2026-09-11T09:21:00.613+08:00  INFO 2748 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T09:21:00.822+08:00  INFO 2748 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T09:21:01.106+08:00  INFO 2748 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T09:21:01.257+08:00  INFO 2748 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T09:21:01.264+08:00  INFO 2748 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.052 seconds (process running for 2.497)
-2026-09-11T09:21:01.301+08:00  INFO 2748 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T09:21:01.302+08:00  INFO 2748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T09:21:01.302+08:00  INFO 2748 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-11T09:22:25.089+08:00  INFO 2748 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T09:22:25.095+08:00  INFO 2748 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T09:24:26.198+08:00  INFO 4628 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 4628 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T09:24:26.200+08:00  INFO 4628 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T09:24:26.920+08:00  INFO 4628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T09:24:26.928+08:00  INFO 4628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T09:24:26.929+08:00  INFO 4628 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T09:24:27.009+08:00  INFO 4628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T09:24:27.009+08:00  INFO 4628 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 779 ms
-2026-09-11T09:24:27.053+08:00  INFO 4628 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T09:24:27.263+08:00  INFO 4628 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T09:24:27.523+08:00  INFO 4628 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T09:24:27.677+08:00  INFO 4628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T09:24:27.685+08:00  INFO 4628 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 1.891 seconds (process running for 2.447)
-2026-09-11T09:24:48.138+08:00  INFO 4628 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T09:24:48.138+08:00  INFO 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T09:24:48.139+08:00  INFO 4628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-11T09:35:59.998+08:00  INFO 4628 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T09:36:00.005+08:00  INFO 4628 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T09:36:02.204+08:00  INFO 11168 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 11168 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T09:36:02.208+08:00  INFO 11168 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T09:36:03.029+08:00  INFO 11168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T09:36:03.037+08:00  INFO 11168 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T09:36:03.038+08:00  INFO 11168 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T09:36:03.121+08:00  INFO 11168 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T09:36:03.121+08:00  INFO 11168 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 877 ms
-2026-09-11T09:36:03.163+08:00  INFO 11168 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T09:36:03.513+08:00  INFO 11168 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T09:36:03.853+08:00  INFO 11168 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T09:36:04.025+08:00  INFO 11168 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T09:36:04.032+08:00  INFO 11168 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.269 seconds (process running for 2.96)
-2026-09-11T09:36:54.427+08:00  INFO 11168 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T09:36:54.428+08:00  INFO 11168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T09:36:54.429+08:00  INFO 11168 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T09:39:36.443+08:00  INFO 11168 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T09:39:36.449+08:00  INFO 11168 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T09:39:38.516+08:00  INFO 8492 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 8492 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T09:39:38.518+08:00  INFO 8492 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T09:39:39.328+08:00  INFO 8492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T09:39:39.337+08:00  INFO 8492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T09:39:39.337+08:00  INFO 8492 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T09:39:39.418+08:00  INFO 8492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T09:39:39.418+08:00  INFO 8492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 867 ms
-2026-09-11T09:39:39.461+08:00  INFO 8492 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T09:39:39.661+08:00  INFO 8492 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T09:39:39.960+08:00  INFO 8492 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T09:39:40.114+08:00  INFO 8492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T09:39:40.121+08:00  INFO 8492 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.04 seconds (process running for 2.712)
-2026-09-11T09:39:43.438+08:00  INFO 8492 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T09:39:43.439+08:00  INFO 8492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T09:39:43.440+08:00  INFO 8492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T09:44:08.242+08:00  INFO 8492 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T09:44:08.248+08:00  INFO 8492 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T09:44:12.137+08:00  INFO 23268 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 23268 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T09:44:12.139+08:00  INFO 23268 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T09:44:12.982+08:00  INFO 23268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T09:44:12.991+08:00  INFO 23268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T09:44:12.991+08:00  INFO 23268 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T09:44:13.073+08:00  INFO 23268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T09:44:13.073+08:00  INFO 23268 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 904 ms
-2026-09-11T09:44:13.114+08:00  INFO 23268 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T09:44:13.319+08:00  INFO 23268 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T09:44:13.579+08:00  INFO 23268 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T09:44:13.723+08:00  INFO 23268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T09:44:13.729+08:00  INFO 23268 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 1.957 seconds (process running for 2.402)
-2026-09-11T09:44:17.687+08:00  INFO 23268 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T09:44:17.687+08:00  INFO 23268 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T09:44:17.688+08:00  INFO 23268 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T09:49:58.419+08:00  INFO 23268 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T09:49:58.426+08:00  INFO 23268 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T09:50:01.374+08:00  INFO 24980 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 24980 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T09:50:01.376+08:00  INFO 24980 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T09:50:02.154+08:00  INFO 24980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T09:50:02.163+08:00  INFO 24980 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T09:50:02.163+08:00  INFO 24980 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T09:50:02.244+08:00  INFO 24980 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T09:50:02.244+08:00  INFO 24980 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 833 ms
-2026-09-11T09:50:02.288+08:00  INFO 24980 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T09:50:02.488+08:00  INFO 24980 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T09:50:02.741+08:00  INFO 24980 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T09:50:02.886+08:00  INFO 24980 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T09:50:02.893+08:00  INFO 24980 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 1.963 seconds (process running for 2.548)
-2026-09-11T09:51:09.950+08:00  INFO 24980 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T09:51:09.951+08:00  INFO 24980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T09:51:09.952+08:00  INFO 24980 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T09:53:00.145+08:00  INFO 24980 --- [http-nio-8080-exec-5] o.t.b.controller.BookController          : 调用添加图书的service接口！！！
-2026-09-11T09:53:00.168+08:00  INFO 24980 --- [http-nio-8080-exec-5] o.t.b.controller.BookController          : 调用添加图书的service接口完成！！！
-2026-09-11T09:54:04.141+08:00  INFO 24980 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T09:54:04.147+08:00  INFO 24980 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T10:10:23.461+08:00  INFO 5676 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 5676 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T10:10:23.463+08:00  INFO 5676 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T10:10:24.221+08:00  INFO 5676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T10:10:24.230+08:00  INFO 5676 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T10:10:24.230+08:00  INFO 5676 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T10:10:24.293+08:00  INFO 5676 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T10:10:24.293+08:00  INFO 5676 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 800 ms
-2026-09-11T10:10:24.337+08:00  INFO 5676 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T10:10:24.536+08:00  INFO 5676 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T10:10:24.807+08:00  INFO 5676 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T10:10:24.942+08:00  INFO 5676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T10:10:24.949+08:00  INFO 5676 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 1.851 seconds (process running for 2.32)
-2026-09-11T10:10:28.515+08:00  INFO 5676 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T10:10:28.516+08:00  INFO 5676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T10:10:28.516+08:00  INFO 5676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-11T10:17:21.068+08:00  INFO 5676 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T10:17:21.074+08:00  INFO 5676 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T10:17:25.755+08:00  INFO 14896 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 14896 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T10:17:25.758+08:00  INFO 14896 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T10:17:26.611+08:00  INFO 14896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T10:17:26.626+08:00  INFO 14896 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T10:17:26.627+08:00  INFO 14896 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T10:17:26.712+08:00  INFO 14896 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T10:17:26.713+08:00  INFO 14896 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 919 ms
-2026-09-11T10:17:26.783+08:00  INFO 14896 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T10:17:27.047+08:00  INFO 14896 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T10:17:27.339+08:00  INFO 14896 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T10:17:27.483+08:00  INFO 14896 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T10:17:27.489+08:00  INFO 14896 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.198 seconds (process running for 2.938)
-2026-09-11T10:19:40.571+08:00  INFO 14896 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T10:19:40.572+08:00  INFO 14896 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T10:19:40.572+08:00  INFO 14896 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-11T10:20:22.564+08:00  INFO 14896 --- [http-nio-8080-exec-8] o.t.b.controller.BookController          : 图书参数校验失败!!!
-2026-09-11T10:21:24.409+08:00  INFO 14896 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T10:21:24.417+08:00  INFO 14896 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T10:21:28.654+08:00  INFO 25356 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 25356 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T10:21:28.656+08:00  INFO 25356 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T10:21:29.551+08:00  INFO 25356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T10:21:29.559+08:00  INFO 25356 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T10:21:29.560+08:00  INFO 25356 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T10:21:29.656+08:00  INFO 25356 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T10:21:29.656+08:00  INFO 25356 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 959 ms
-2026-09-11T10:21:29.706+08:00  INFO 25356 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T10:21:29.925+08:00  INFO 25356 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T10:21:30.203+08:00  INFO 25356 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T10:21:30.369+08:00  INFO 25356 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T10:21:30.375+08:00  INFO 25356 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.235 seconds (process running for 2.755)
-2026-09-11T10:21:52.918+08:00  INFO 25356 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T10:21:52.918+08:00  INFO 25356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T10:21:52.919+08:00  INFO 25356 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T10:21:53.053+08:00 ERROR 25356 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and book_name = '图书更新接口测试'
-            and author = '图书更�' at line 2
-### The error may exist in file [C:\Users\txf\Desktop\java_review\book_management\target\classes\mapper\BookMapper.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: update book_info          SET and book_name = ?             and author = ?           WHERE id = ?
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and book_name = '图书更新接口测试'
-            and author = '图书更�' at line 2
-; bad SQL grammar []] with root cause
+2026-09-13T08:12:02.008+08:00  INFO 26188 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 26188 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T08:12:02.015+08:00  INFO 26188 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T08:12:02.966+08:00  INFO 26188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T08:12:02.976+08:00  INFO 26188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T08:12:02.977+08:00  INFO 26188 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T08:12:03.060+08:00  INFO 26188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T08:12:03.060+08:00  INFO 26188 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1003 ms
+2026-09-13T08:12:03.107+08:00  INFO 26188 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T08:12:03.490+08:00  INFO 26188 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T08:12:03.914+08:00  INFO 26188 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T08:12:04.083+08:00  INFO 26188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T08:12:04.090+08:00  INFO 26188 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.653 seconds (process running for 3.471)
+2026-09-13T08:22:00.546+08:00  INFO 26188 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T08:22:00.547+08:00  INFO 26188 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T08:22:00.548+08:00  INFO 26188 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-13T08:22:00.578+08:00  WARN 26188 --- [http-nio-8080-exec-3] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.book_management.controller.UserController
+2026-09-13T08:22:29.725+08:00  INFO 26188 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T08:22:29.727+08:00  INFO 26188 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T08:42:42.429+08:00  INFO 31544 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 31544 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T08:42:42.432+08:00  INFO 31544 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T08:42:43.296+08:00  INFO 31544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T08:42:43.306+08:00  INFO 31544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T08:42:43.306+08:00  INFO 31544 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T08:42:43.388+08:00  INFO 31544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T08:42:43.388+08:00  INFO 31544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 922 ms
+2026-09-13T08:42:43.432+08:00  INFO 31544 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T08:42:43.644+08:00  INFO 31544 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T08:42:43.917+08:00  INFO 31544 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T08:42:44.063+08:00  INFO 31544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T08:42:44.070+08:00  INFO 31544 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.053 seconds (process running for 2.524)
+2026-09-13T08:42:50.001+08:00  INFO 31544 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T08:42:50.002+08:00  INFO 31544 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T08:42:50.004+08:00  INFO 31544 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-13T08:42:50.027+08:00  WARN 31544 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.book_management.controller.UserController
+2026-09-13T08:42:54.218+08:00  INFO 31544 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T08:42:54.225+08:00  INFO 31544 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:08:05.111+08:00  INFO 5844 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 5844 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:08:05.114+08:00  INFO 5844 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:08:05.951+08:00  INFO 5844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:08:05.965+08:00  INFO 5844 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:08:05.966+08:00  INFO 5844 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:08:06.040+08:00  INFO 5844 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:08:06.040+08:00  INFO 5844 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 891 ms
+2026-09-13T09:08:06.115+08:00  INFO 5844 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:08:06.348+08:00  INFO 5844 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:08:06.676+08:00  INFO 5844 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:08:06.833+08:00  INFO 5844 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:08:06.839+08:00  INFO 5844 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.17 seconds (process running for 2.664)
+2026-09-13T09:08:11.293+08:00  INFO 5844 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T09:08:11.293+08:00  INFO 5844 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T09:08:11.294+08:00  INFO 5844 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-13T09:08:11.316+08:00  WARN 5844 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-09-13T09:08:11.322+08:00  INFO 5844 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:08:11.353+08:00  INFO 5844 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:08:11.356+08:00 ERROR 5844 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
 
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and book_name = '图书更新接口测试'
-            and author = '图书更�' at line 2
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.32.jar:8.0.32]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.32.jar:8.0.32]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354) ~[mysql-connector-j-8.0.32.jar:8.0.32]
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483) ~[druid-1.2.28.jar:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58) ~[mybatis-3.5.13.jar:3.5.13]
-	at jdk.proxy3/jdk.proxy3.$Proxy69.execute(Unknown Source) ~[na:na]
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.13.jar:3.5.13]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-3.0.2.jar:3.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy59.update(Unknown Source) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:288) ~[mybatis-spring-3.0.2.jar:3.0.2]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.13.jar:3.5.13]
-	at jdk.proxy2/jdk.proxy2.$Proxy60.updateBook(Unknown Source) ~[na:na]
-	at org.txf.book_management.service.BookService.updateBook(BookService.java:46) ~[classes/:na]
-	at org.txf.book_management.controller.BookController.updateBook(BookController.java:44) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:527) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:209) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.txf.book_management.intercepteor.LoginInterceptor.preHandle(LoginInterceptor.java:34) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:443) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:367) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:295) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:372) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:228) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:155) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-09-13T09:08:11.360+08:00 ERROR 5844 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+jakarta.servlet.ServletException: Request processing failed: java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1019) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:443) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:367) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:295) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:372) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:228) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:155) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:527) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:209) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.txf.book_management.intercepteor.LoginInterceptor.preHandle(LoginInterceptor.java:34) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	... 35 common frames omitted
+
+2026-09-13T09:08:58.191+08:00  WARN 5844 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-09-13T09:08:58.191+08:00  INFO 5844 --- [http-nio-8080-exec-3] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:08:58.192+08:00  INFO 5844 --- [http-nio-8080-exec-3] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:08:58.192+08:00 ERROR 5844 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:527) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:209) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.txf.book_management.intercepteor.LoginInterceptor.preHandle(LoginInterceptor.java:34) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:443) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:367) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:295) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:372) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:228) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:155) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2026-09-13T09:08:58.193+08:00 ERROR 5844 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+jakarta.servlet.ServletException: Request processing failed: java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1019) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:443) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:367) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:295) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:372) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:228) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:155) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:527) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:209) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.txf.book_management.intercepteor.LoginInterceptor.preHandle(LoginInterceptor.java:34) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	... 35 common frames omitted
+
+2026-09-13T09:09:13.575+08:00  INFO 5844 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:09:13.575+08:00  INFO 5844 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:09:13.576+08:00 ERROR 5844 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalStateException: getWriter() has already been called for this response] with root cause
+
+java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:527) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:209) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.txf.book_management.intercepteor.LoginInterceptor.preHandle(LoginInterceptor.java:34) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075) ~[spring-webmvc-6.0.4.jar:6.0.4]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
@@ -409,74 +295,16 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2026-09-11T10:25:50.395+08:00  INFO 25356 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T10:25:50.401+08:00  INFO 25356 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T10:25:52.855+08:00  INFO 11944 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 11944 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T10:25:52.858+08:00  INFO 11944 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T10:25:53.783+08:00  INFO 11944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T10:25:53.792+08:00  INFO 11944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T10:25:53.792+08:00  INFO 11944 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T10:25:53.865+08:00  INFO 11944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T10:25:53.866+08:00  INFO 11944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 971 ms
-2026-09-11T10:25:53.914+08:00  INFO 11944 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T10:25:54.123+08:00  INFO 11944 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T10:25:54.416+08:00  INFO 11944 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T10:25:54.572+08:00  INFO 11944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T10:25:54.579+08:00  INFO 11944 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.15 seconds (process running for 2.632)
-2026-09-11T10:26:00.013+08:00  INFO 11944 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T10:26:00.014+08:00  INFO 11944 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T10:26:00.015+08:00  INFO 11944 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T10:26:00.140+08:00 ERROR 11944 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: 
-### Error updating database.  Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = 57' at line 4
-### The error may exist in file [C:\Users\txf\Desktop\java_review\book_management\target\classes\mapper\BookMapper.xml]
-### The error may involve defaultParameterMap
-### The error occurred while setting parameters
-### SQL: update book_info          SET book_name = ? and             author = ? and           WHERE id = ?
-### Cause: java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = 57' at line 4
-; bad SQL grammar []] with root cause
+2026-09-13T09:09:13.578+08:00  INFO 5844 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:09:13.578+08:00  INFO 5844 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:09:13.579+08:00 ERROR 5844 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
 
-java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id = 57' at line 4
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-j-8.0.32.jar:8.0.32]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.0.32.jar:8.0.32]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916) ~[mysql-connector-j-8.0.32.jar:8.0.32]
-	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:354) ~[mysql-connector-j-8.0.32.jar:8.0.32]
-	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:483) ~[druid-1.2.28.jar:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:58) ~[mybatis-3.5.13.jar:3.5.13]
-	at jdk.proxy3/jdk.proxy3.$Proxy69.execute(Unknown Source) ~[na:na]
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:48) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:75) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.13.jar:3.5.13]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-3.0.2.jar:3.0.2]
-	at jdk.proxy2/jdk.proxy2.$Proxy59.update(Unknown Source) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate.update(SqlSessionTemplate.java:288) ~[mybatis-spring-3.0.2.jar:3.0.2]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:67) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:142) ~[mybatis-3.5.13.jar:3.5.13]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.13.jar:3.5.13]
-	at jdk.proxy2/jdk.proxy2.$Proxy60.updateBook(Unknown Source) ~[na:na]
-	at org.txf.book_management.service.BookService.updateBook(BookService.java:46) ~[classes/:na]
-	at org.txf.book_management.controller.BookController.updateBook(BookController.java:44) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.4.jar:6.0.4]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1080) ~[spring-webmvc-6.0.4.jar:6.0.4]
+java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:527) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:209) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.txf.book_management.intercepteor.LoginInterceptor.preHandle(LoginInterceptor.java:34) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075) ~[spring-webmvc-6.0.4.jar:6.0.4]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
 	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
@@ -485,25 +313,24 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.4.jar:6.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:443) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:367) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:295) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:372) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:228) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:313) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:153) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
@@ -517,161 +344,263 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
-2026-09-11T10:27:35.142+08:00  INFO 11944 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T10:27:35.149+08:00  INFO 11944 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T10:27:37.157+08:00  INFO 3596 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 3596 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T10:27:37.159+08:00  INFO 3596 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T10:27:37.925+08:00  INFO 3596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T10:27:37.932+08:00  INFO 3596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T10:27:37.933+08:00  INFO 3596 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T10:27:38.010+08:00  INFO 3596 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T10:27:38.010+08:00  INFO 3596 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 820 ms
-2026-09-11T10:27:38.053+08:00  INFO 3596 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T10:27:38.304+08:00  INFO 3596 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T10:27:38.590+08:00  INFO 3596 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T10:27:38.764+08:00  INFO 3596 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T10:27:38.772+08:00  INFO 3596 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.017 seconds (process running for 2.505)
-2026-09-11T10:27:48.248+08:00  INFO 3596 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T10:27:48.249+08:00  INFO 3596 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T10:27:48.249+08:00  INFO 3596 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-11T10:28:01.193+08:00  INFO 3596 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T10:28:01.201+08:00  INFO 3596 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T10:43:55.814+08:00  INFO 1632 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 1632 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T10:43:55.817+08:00  INFO 1632 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T10:43:56.722+08:00  INFO 1632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T10:43:56.732+08:00  INFO 1632 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T10:43:56.733+08:00  INFO 1632 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T10:43:56.810+08:00  INFO 1632 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T10:43:56.811+08:00  INFO 1632 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 961 ms
-2026-09-11T10:43:56.861+08:00  INFO 1632 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T10:43:57.088+08:00  INFO 1632 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T10:43:57.392+08:00  INFO 1632 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T10:43:57.674+08:00  INFO 1632 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T10:43:57.683+08:00  INFO 1632 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.34 seconds (process running for 2.835)
-2026-09-11T10:44:47.153+08:00  INFO 1632 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T10:44:47.158+08:00  INFO 1632 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T10:44:51.306+08:00  INFO 4420 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 4420 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T10:44:51.307+08:00  INFO 4420 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T10:44:52.223+08:00  INFO 4420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T10:44:52.239+08:00  INFO 4420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T10:44:52.240+08:00  INFO 4420 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T10:44:52.331+08:00  INFO 4420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T10:44:52.331+08:00  INFO 4420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 979 ms
-2026-09-11T10:44:52.379+08:00  INFO 4420 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T10:44:52.659+08:00  INFO 4420 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T10:44:52.946+08:00  INFO 4420 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T10:44:53.175+08:00  INFO 4420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T10:44:53.182+08:00  INFO 4420 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.323 seconds (process running for 2.782)
-2026-09-11T10:45:10.587+08:00  INFO 4420 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T10:45:10.587+08:00  INFO 4420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T10:45:10.588+08:00  INFO 4420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-11T10:45:33.987+08:00  INFO 4420 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T10:45:33.993+08:00  INFO 4420 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T10:47:09.795+08:00  INFO 24088 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 24088 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T10:47:09.797+08:00  INFO 24088 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T10:47:10.521+08:00  INFO 24088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T10:47:10.530+08:00  INFO 24088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T10:47:10.530+08:00  INFO 24088 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T10:47:10.608+08:00  INFO 24088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T10:47:10.609+08:00  INFO 24088 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 782 ms
-2026-09-11T10:47:10.650+08:00  INFO 24088 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T10:47:10.861+08:00  INFO 24088 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T10:47:11.112+08:00  INFO 24088 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T10:47:11.258+08:00  INFO 24088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T10:47:11.264+08:00  INFO 24088 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 1.834 seconds (process running for 2.255)
-2026-09-11T10:47:15.147+08:00  INFO 24088 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T10:47:15.148+08:00  INFO 24088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T10:47:15.148+08:00  INFO 24088 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-11T11:14:45.571+08:00  INFO 24088 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T11:14:45.586+08:00  INFO 24088 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T11:14:50.763+08:00  INFO 26320 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 26320 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T11:14:50.765+08:00  INFO 26320 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T11:14:51.582+08:00  INFO 26320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T11:14:51.592+08:00  INFO 26320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T11:14:51.592+08:00  INFO 26320 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T11:14:51.678+08:00  INFO 26320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T11:14:51.678+08:00  INFO 26320 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 882 ms
-2026-09-11T11:14:51.725+08:00  INFO 26320 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T11:14:51.940+08:00  INFO 26320 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T11:14:52.275+08:00  INFO 26320 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T11:14:52.415+08:00  INFO 26320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T11:14:52.422+08:00  INFO 26320 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.101 seconds (process running for 4.23)
-2026-09-11T11:15:03.730+08:00  INFO 26320 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T11:15:03.731+08:00  INFO 26320 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T11:15:03.732+08:00  INFO 26320 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T11:15:40.473+08:00  INFO 26320 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T11:15:40.479+08:00  INFO 26320 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T11:31:05.802+08:00  INFO 27060 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 27060 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T11:31:05.805+08:00  INFO 27060 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T11:31:06.644+08:00  INFO 27060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T11:31:06.658+08:00  INFO 27060 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T11:31:06.659+08:00  INFO 27060 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T11:31:06.744+08:00  INFO 27060 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T11:31:06.745+08:00  INFO 27060 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 897 ms
-2026-09-11T11:31:06.794+08:00  INFO 27060 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T11:31:07.005+08:00  INFO 27060 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T11:31:07.292+08:00  INFO 27060 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T11:31:07.439+08:00  INFO 27060 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T11:31:07.446+08:00  INFO 27060 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.025 seconds (process running for 2.507)
-2026-09-11T11:31:19.003+08:00  INFO 27060 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T11:31:19.003+08:00  INFO 27060 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T11:31:19.004+08:00  INFO 27060 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T11:31:23.921+08:00  INFO 27060 --- [http-nio-8080-exec-5] o.t.b.controller.BookController          : 图书的id为空
-2026-09-11T11:31:56.787+08:00  INFO 27060 --- [http-nio-8080-exec-2] o.t.b.controller.BookController          : 图书的id为空
-2026-09-11T11:34:45.955+08:00  INFO 27060 --- [http-nio-8080-exec-4] o.t.b.controller.BookController          : 图书的id为空
-2026-09-11T11:35:23.638+08:00  INFO 27060 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T11:35:23.645+08:00  INFO 27060 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T11:35:25.657+08:00  INFO 20384 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 20384 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T11:35:25.660+08:00  INFO 20384 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T11:35:26.904+08:00  INFO 20384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T11:35:26.913+08:00  INFO 20384 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T11:35:26.914+08:00  INFO 20384 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T11:35:26.993+08:00  INFO 20384 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T11:35:26.993+08:00  INFO 20384 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1303 ms
-2026-09-11T11:35:27.034+08:00  INFO 20384 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T11:35:27.294+08:00  INFO 20384 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T11:35:27.584+08:00  INFO 20384 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T11:35:27.744+08:00  INFO 20384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T11:35:27.750+08:00  INFO 20384 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.524 seconds (process running for 2.995)
-2026-09-11T11:35:28.850+08:00  INFO 20384 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T11:35:28.850+08:00  INFO 20384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T11:35:28.852+08:00  INFO 20384 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T11:35:54.262+08:00  INFO 20384 --- [http-nio-8080-exec-10] o.t.b.controller.BookController          : 图书的id为空
-2026-09-11T11:38:08.647+08:00  INFO 20384 --- [http-nio-8080-exec-8] o.t.b.controller.BookController          : 图书的id为空
-2026-09-11T11:38:57.315+08:00  INFO 20384 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T11:38:57.320+08:00  INFO 20384 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T11:39:00.305+08:00  INFO 25692 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 25692 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T11:39:00.308+08:00  INFO 25692 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T11:39:01.198+08:00  INFO 25692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T11:39:01.208+08:00  INFO 25692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T11:39:01.208+08:00  INFO 25692 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T11:39:01.299+08:00  INFO 25692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T11:39:01.300+08:00  INFO 25692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 957 ms
-2026-09-11T11:39:01.348+08:00  INFO 25692 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T11:39:01.587+08:00  INFO 25692 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T11:39:01.918+08:00  INFO 25692 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T11:39:02.086+08:00  INFO 25692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T11:39:02.093+08:00  INFO 25692 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.23 seconds (process running for 3.117)
-2026-09-11T11:39:06.515+08:00  INFO 25692 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T11:39:06.515+08:00  INFO 25692 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T11:39:06.516+08:00  INFO 25692 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2026-09-11T11:39:14.733+08:00  INFO 25692 --- [http-nio-8080-exec-7] o.t.b.controller.BookController          : 图书的id为空
-2026-09-11T11:43:12.239+08:00  INFO 25692 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T11:43:12.245+08:00  INFO 25692 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2026-09-11T11:43:15.059+08:00  INFO 23048 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 23048 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
-2026-09-11T11:43:15.062+08:00  INFO 23048 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
-2026-09-11T11:43:15.811+08:00  INFO 23048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2026-09-11T11:43:15.819+08:00  INFO 23048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-11T11:43:15.820+08:00  INFO 23048 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-2026-09-11T11:43:15.900+08:00  INFO 23048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-09-11T11:43:15.900+08:00  INFO 23048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 805 ms
-2026-09-11T11:43:15.942+08:00  INFO 23048 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2026-09-11T11:43:16.144+08:00  INFO 23048 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2026-09-11T11:43:16.412+08:00  INFO 23048 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2026-09-11T11:43:16.563+08:00  INFO 23048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2026-09-11T11:43:16.570+08:00  INFO 23048 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 1.931 seconds (process running for 2.502)
-2026-09-11T11:43:24.279+08:00  INFO 23048 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-11T11:43:24.280+08:00  INFO 23048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-11T11:43:24.281+08:00  INFO 23048 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-09-11T11:43:40.409+08:00  INFO 23048 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2026-09-11T11:43:40.416+08:00  INFO 23048 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:09:13.579+08:00 ERROR 5844 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+jakarta.servlet.ServletException: Request processing failed: java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1019) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:731) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:814) ~[tomcat-embed-core-10.1.5.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:223) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.0.4.jar:6.0.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:691) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:443) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:367) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:295) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:372) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:228) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:313) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:153) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.lang.IllegalStateException: getWriter() has already been called for this response
+	at org.apache.catalina.connector.Response.getOutputStream(Response.java:527) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.apache.catalina.connector.ResponseFacade.getOutputStream(ResponseFacade.java:209) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
+	at org.txf.book_management.intercepteor.LoginInterceptor.preHandle(LoginInterceptor.java:34) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.applyPreHandle(HandlerExecutionChain.java:146) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1075) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:973) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.4.jar:6.0.4]
+	... 36 common frames omitted
+
+2026-09-13T09:09:30.249+08:00  INFO 5844 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:09:30.257+08:00  INFO 5844 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:10:27.396+08:00  INFO 13256 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 13256 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:10:27.399+08:00  INFO 13256 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:10:28.294+08:00  INFO 13256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:10:28.308+08:00  INFO 13256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:10:28.308+08:00  INFO 13256 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:10:28.386+08:00  INFO 13256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:10:28.386+08:00  INFO 13256 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 952 ms
+2026-09-13T09:10:28.460+08:00  INFO 13256 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:10:28.678+08:00  INFO 13256 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:10:28.934+08:00  INFO 13256 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:10:29.091+08:00  INFO 13256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:10:29.098+08:00  INFO 13256 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.086 seconds (process running for 2.515)
+2026-09-13T09:10:32.440+08:00  INFO 13256 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T09:10:32.441+08:00  INFO 13256 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T09:10:32.442+08:00  INFO 13256 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-13T09:10:32.489+08:00  WARN 13256 --- [http-nio-8080-exec-2] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.txf.book_management.controller.UserController
+2026-09-13T09:10:39.661+08:00  WARN 13256 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2026-09-13T09:10:39.666+08:00  INFO 13256 --- [http-nio-8080-exec-3] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:10:39.666+08:00  INFO 13256 --- [http-nio-8080-exec-3] o.t.b.intercepteor.LoginInterceptor      : 用户登录校验通过.
+2026-09-13T09:12:19.841+08:00  INFO 13256 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:12:19.841+08:00  INFO 13256 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 用户登录校验通过.
+2026-09-13T09:12:19.843+08:00  INFO 13256 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:12:19.843+08:00  INFO 13256 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 用户登录校验通过.
+2026-09-13T09:12:38.714+08:00  INFO 13256 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:12:38.715+08:00  INFO 13256 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 用户登录校验通过.
+2026-09-13T09:12:59.910+08:00  INFO 13256 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:12:59.915+08:00  INFO 13256 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:26:04.148+08:00  INFO 22732 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 22732 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:26:04.150+08:00  INFO 22732 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:26:04.915+08:00  INFO 22732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:26:04.923+08:00  INFO 22732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:26:04.923+08:00  INFO 22732 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:26:04.998+08:00  INFO 22732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:26:04.999+08:00  INFO 22732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 818 ms
+2026-09-13T09:26:05.079+08:00  INFO 22732 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:26:05.284+08:00  INFO 22732 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:26:05.526+08:00  INFO 22732 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:26:05.684+08:00  INFO 22732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:26:05.691+08:00  INFO 22732 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 1.948 seconds (process running for 2.499)
+2026-09-13T09:26:09.019+08:00  INFO 22732 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T09:26:09.019+08:00  INFO 22732 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T09:26:09.020+08:00  INFO 22732 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-13T09:26:09.033+08:00  INFO 22732 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:26:09.062+08:00  INFO 22732 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:29:35.536+08:00  INFO 22732 --- [http-nio-8080-exec-6] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:29:35.537+08:00  INFO 22732 --- [http-nio-8080-exec-6] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:29:35.604+08:00  INFO 22732 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:29:35.605+08:00  INFO 22732 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:29:42.575+08:00  INFO 22732 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:29:42.582+08:00  INFO 22732 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:35:28.786+08:00  INFO 17640 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 17640 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:35:28.789+08:00  INFO 17640 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:35:29.575+08:00  INFO 17640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:35:29.586+08:00  INFO 17640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:35:29.587+08:00  INFO 17640 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:35:29.684+08:00  INFO 17640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:35:29.685+08:00  INFO 17640 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 864 ms
+2026-09-13T09:35:29.777+08:00  INFO 17640 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:35:30.021+08:00  INFO 17640 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:35:30.312+08:00  INFO 17640 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:35:30.487+08:00  INFO 17640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:35:30.494+08:00  INFO 17640 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.182 seconds (process running for 2.627)
+2026-09-13T09:35:50.090+08:00  INFO 17640 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T09:35:50.091+08:00  INFO 17640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T09:35:50.092+08:00  INFO 17640 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-13T09:35:50.109+08:00  INFO 17640 --- [http-nio-8080-exec-1] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:35:50.140+08:00  INFO 17640 --- [http-nio-8080-exec-1] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:35:51.708+08:00  INFO 17640 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:35:51.710+08:00  INFO 17640 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:35:53.313+08:00  INFO 17640 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:35:53.313+08:00  INFO 17640 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:35:54.480+08:00  INFO 17640 --- [http-nio-8080-exec-6] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:35:54.480+08:00  INFO 17640 --- [http-nio-8080-exec-6] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:36:10.008+08:00  INFO 17640 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:36:10.013+08:00  INFO 17640 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:41:38.842+08:00  INFO 29084 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 29084 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:41:38.845+08:00  INFO 29084 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:41:39.714+08:00  INFO 29084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:41:39.723+08:00  INFO 29084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:41:39.724+08:00  INFO 29084 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:41:39.801+08:00  INFO 29084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:41:39.802+08:00  INFO 29084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 924 ms
+2026-09-13T09:41:39.874+08:00  INFO 29084 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:41:40.094+08:00  INFO 29084 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:41:40.321+08:00  INFO 29084 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:41:40.466+08:00  INFO 29084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:41:40.472+08:00  INFO 29084 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.107 seconds (process running for 2.535)
+2026-09-13T09:41:45.442+08:00  INFO 29084 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T09:41:45.442+08:00  INFO 29084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T09:41:45.444+08:00  INFO 29084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-13T09:41:45.576+08:00  INFO 29084 --- [http-nio-8080-exec-3] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:41:45.611+08:00  INFO 29084 --- [http-nio-8080-exec-3] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:41:45.646+08:00  INFO 29084 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:41:45.648+08:00  INFO 29084 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:41:46.987+08:00  INFO 29084 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:41:46.988+08:00  INFO 29084 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:41:48.907+08:00  INFO 29084 --- [http-nio-8080-exec-5] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:41:48.908+08:00  INFO 29084 --- [http-nio-8080-exec-5] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:43:06.943+08:00  INFO 29084 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:43:06.948+08:00  INFO 29084 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:43:09.386+08:00  INFO 6264 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 6264 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:43:09.389+08:00  INFO 6264 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:43:10.212+08:00  INFO 6264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:43:10.220+08:00  INFO 6264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:43:10.221+08:00  INFO 6264 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:43:10.293+08:00  INFO 6264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:43:10.293+08:00  INFO 6264 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 839 ms
+2026-09-13T09:43:10.363+08:00  INFO 6264 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:43:10.569+08:00  INFO 6264 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:43:10.831+08:00  INFO 6264 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:43:10.983+08:00  INFO 6264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:43:10.990+08:00  INFO 6264 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.246 seconds (process running for 2.88)
+2026-09-13T09:43:17.769+08:00  INFO 6264 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T09:43:17.769+08:00  INFO 6264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T09:43:17.769+08:00  INFO 6264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-13T09:43:17.868+08:00  INFO 6264 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:43:17.900+08:00  INFO 6264 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:43:19.106+08:00  INFO 6264 --- [http-nio-8080-exec-3] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:43:19.107+08:00  INFO 6264 --- [http-nio-8080-exec-3] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:43:20.922+08:00  INFO 6264 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:43:20.923+08:00  INFO 6264 --- [http-nio-8080-exec-4] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:43:38.009+08:00  INFO 6264 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:43:38.014+08:00  INFO 6264 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:43:41.469+08:00  INFO 25708 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 25708 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:43:41.473+08:00  INFO 25708 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:43:42.296+08:00  INFO 25708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:43:42.304+08:00  INFO 25708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:43:42.305+08:00  INFO 25708 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:43:42.381+08:00  INFO 25708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:43:42.381+08:00  INFO 25708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 871 ms
+2026-09-13T09:43:42.472+08:00  INFO 25708 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:43:42.700+08:00  INFO 25708 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:43:42.962+08:00  INFO 25708 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:43:43.113+08:00  INFO 25708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:43:43.121+08:00  INFO 25708 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.091 seconds (process running for 3.235)
+2026-09-13T09:43:46.765+08:00  INFO 25708 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T09:43:46.766+08:00  INFO 25708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T09:43:46.767+08:00  INFO 25708 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-13T09:43:46.862+08:00  INFO 25708 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:43:46.897+08:00  INFO 25708 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:43:47.092+08:00  INFO 25708 --- [http-nio-8080-exec-9] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:43:47.092+08:00  INFO 25708 --- [http-nio-8080-exec-9] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:43:48.384+08:00  INFO 25708 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:43:48.384+08:00  INFO 25708 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:44:17.019+08:00  INFO 25708 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:44:17.027+08:00  INFO 25708 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:44:19.788+08:00  INFO 7444 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 7444 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:44:19.791+08:00  INFO 7444 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:44:20.661+08:00  INFO 7444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:44:20.670+08:00  INFO 7444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:44:20.671+08:00  INFO 7444 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:44:20.742+08:00  INFO 7444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:44:20.742+08:00  INFO 7444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 910 ms
+2026-09-13T09:44:20.827+08:00  INFO 7444 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:44:21.076+08:00  INFO 7444 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:44:21.360+08:00  INFO 7444 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:44:21.519+08:00  INFO 7444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:44:21.525+08:00  INFO 7444 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.288 seconds (process running for 3.214)
+2026-09-13T09:44:22.026+08:00  INFO 7444 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T09:44:22.028+08:00  INFO 7444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T09:44:22.028+08:00  INFO 7444 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-09-13T09:44:22.110+08:00  INFO 7444 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:44:22.121+08:00  INFO 7444 --- [http-nio-8080-exec-9] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:44:22.143+08:00  INFO 7444 --- [http-nio-8080-exec-9] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:44:22.143+08:00  INFO 7444 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:44:23.115+08:00  INFO 7444 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:44:23.115+08:00  INFO 7444 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:44:34.932+08:00  INFO 7444 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:44:34.942+08:00  INFO 7444 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:44:37.492+08:00  INFO 29124 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 29124 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:44:37.495+08:00  INFO 29124 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:44:38.282+08:00  INFO 29124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:44:38.291+08:00  INFO 29124 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:44:38.291+08:00  INFO 29124 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:44:38.366+08:00  INFO 29124 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:44:38.366+08:00  INFO 29124 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 830 ms
+2026-09-13T09:44:38.446+08:00  INFO 29124 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:44:38.662+08:00  INFO 29124 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:44:38.920+08:00  INFO 29124 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:44:39.074+08:00  INFO 29124 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:44:39.080+08:00  INFO 29124 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.079 seconds (process running for 2.895)
+2026-09-13T09:46:02.304+08:00  INFO 29124 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:46:02.310+08:00  INFO 29124 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2026-09-13T09:46:05.163+08:00  INFO 32508 --- [main] o.t.b.BookManagementApplication          : Starting BookManagementApplication using Java 17.0.5 with PID 32508 (C:\Users\txf\Desktop\java_review\book_management\target\classes started by txf in C:\Users\txf\Desktop\java_review\book_management)
+2026-09-13T09:46:05.167+08:00  INFO 32508 --- [main] o.t.b.BookManagementApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-09-13T09:46:06.109+08:00  INFO 32508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2026-09-13T09:46:06.121+08:00  INFO 32508 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-13T09:46:06.121+08:00  INFO 32508 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2026-09-13T09:46:06.201+08:00  INFO 32508 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-09-13T09:46:06.202+08:00  INFO 32508 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 996 ms
+2026-09-13T09:46:06.289+08:00  INFO 32508 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2026-09-13T09:46:06.530+08:00  INFO 32508 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2026-09-13T09:46:06.816+08:00  INFO 32508 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2026-09-13T09:46:06.985+08:00  INFO 32508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2026-09-13T09:46:06.992+08:00  INFO 32508 --- [main] o.t.b.BookManagementApplication          : Started BookManagementApplication in 2.451 seconds (process running for 3.441)
+2026-09-13T09:46:09.722+08:00  INFO 32508 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-13T09:46:09.723+08:00  INFO 32508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-13T09:46:09.724+08:00  INFO 32508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-13T09:46:09.791+08:00  INFO 32508 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:46:09.802+08:00  INFO 32508 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:46:09.825+08:00  INFO 32508 --- [http-nio-8080-exec-8] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:46:09.825+08:00  INFO 32508 --- [http-nio-8080-exec-7] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:46:11.054+08:00  INFO 32508 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:46:11.055+08:00  INFO 32508 --- [http-nio-8080-exec-2] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:46:11.182+08:00  INFO 32508 --- [http-nio-8080-exec-5] o.t.b.intercepteor.LoginInterceptor      : 登录拦截器执行，判断用户是否登录.
+2026-09-13T09:46:11.182+08:00  INFO 32508 --- [http-nio-8080-exec-5] o.t.b.intercepteor.LoginInterceptor      : 用户未登录.
+2026-09-13T09:46:19.431+08:00  INFO 32508 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2026-09-13T09:46:19.442+08:00  INFO 32508 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

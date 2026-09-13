@@ -10,10 +10,9 @@
         <result column="update_time" property="updateTime" ></result>
     </resultMap>
 <!--    这里手动做一个映射，可以在mybatis设置自动映射-->
-    <select id = "getUserByUsnAndPwd" resultMap="UserBaseMap">
+    <select id = "getUserByUsername" resultMap="UserBaseMap">
         select `id`, `user_name`, `password`, `delete_flag`, `create_time`, `update_time`
         from user_info
         where user_name = #{username}
-        and password = #{password}
     </select>
 </mapper>

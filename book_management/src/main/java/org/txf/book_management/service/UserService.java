@@ -9,7 +9,7 @@ import org.txf.book_management.model.User;
 public class UserService {
     @Autowired
     UserMapper userMapper;
-    public User login(String username, String password) {
-        return userMapper.getUserByUsnAndPwd(username, password);
+    public User getUserByUsername(String username) {
+        return userMapper.getUserByUsername(username);
     }
 }

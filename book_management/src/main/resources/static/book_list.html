@@ -205,7 +205,10 @@
                     },
 
                     error: function (xhr, textStatus) {
-                        if (textStatus === "timeout") {
+                        if (xhr.status === 401) {
+                            alert("用户未登录，请先登录.")
+                            location.href = "login.html"
+                        } else if (textStatus === "timeout") {
                             showTableMessage("加载超时，请刷新页面重试");
                         } else {
                             showTableMessage("图书加载失败，请检查后端服务");

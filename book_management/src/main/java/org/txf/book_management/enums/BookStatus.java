@@ -1,4 +1,4 @@
-package org.txf.book_management.result;
+package org.txf.book_management.enums;
 
 public enum BookStatus {
 

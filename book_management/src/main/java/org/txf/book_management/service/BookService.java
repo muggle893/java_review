@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.txf.book_management.dao.BookMapper;
 import org.txf.book_management.model.Book;
-import org.txf.book_management.result.BookStatus;
+import org.txf.book_management.enums.BookStatus;
 
 import java.util.ArrayList;
 import java.util.List;

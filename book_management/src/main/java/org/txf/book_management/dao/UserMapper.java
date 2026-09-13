@@ -7,5 +7,5 @@ import org.txf.book_management.model.User;
 @Mapper
 public interface UserMapper {
 
-    User getUserByUsnAndPwd(@Param("username")String username, @Param("password")String password);
+    User getUserByUsername(@Param("username")String username);
 }
