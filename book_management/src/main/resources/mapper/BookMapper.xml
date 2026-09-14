@@ -1,40 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="org.txf.book_management.dao.BookMapper">
-    <sql id = "bookAttrs">
-        `id`, `book_name`,
-               `author`, `count`, `price`,
-               `publish`, `status`, `create_time`,
-               `update_time`
+
+    <!-- column 是数据库列名，property 是 Book 的 Java 属性名。 -->
+    <resultMap id="bookResultMap" type="org.txf.book_management.model.Book">
+        <id column="id" property="id"/>
+        <result column="book_name" property="bookName"/>
+        <result column="author" property="author"/>
+        <result column="count" property="count"/>
+        <result column="price" property="price"/>
+        <result column="publish" property="publish"/>
+        <result column="status" property="status"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 查询使用的公共列；statusCN 由 Java 代码根据 status 转换。 -->
+    <sql id="bookAttrs">
+        id, book_name, author, `count`, price, publish, status,
+        create_time, update_time
     </sql>
 
-    <select id = "selectAll" resultType="org.txf.book_management.model.Book">
-        select <include refid="bookAttrs"></include>
-        from book_info;
+    <!-- List<Book> selectAll(); -->
+    <select id="selectAll" resultMap="bookResultMap">
+        SELECT <include refid="bookAttrs"/>
+        FROM book_info
+        ORDER BY id ASC
     </select>
 
-    <select id = "selectByPage" resultType="org.txf.book_management.model.Book">
-        select <include refid="bookAttrs"></include>
-        from book_info
-        order by id asc
-        LIMIT #{limit} OFFSET #{offset};
+    <!-- selectByPage(@Param("offset") int start, @Param("limit") int limit) -->
+    <select id="selectByPage" resultMap="bookResultMap">
+        SELECT <include refid="bookAttrs"/>
+        FROM book_info
+        ORDER BY id ASC
+        LIMIT #{offset}, #{limit}
     </select>
 
+    <!-- long getBookCount(); -->
     <select id="getBookCount" resultType="java.lang.Long">
-        select count(*) from book_info;
+        SELECT COUNT(*) FROM book_info
     </select>
 
-    <sql id = "tableField">
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="bookName != null">book_name,</if>
-            <if test="author != null">author,</if>
-            <if test="count != null">`count`,</if>
-            <if test="price != null">price,</if>
-            <if test="publish != null">publish,</if>
-            <if test="status != null">status,</if>
-        </trim>
+    <!-- Book getBookById(int id); -->
+    <select id="getBookById" parameterType="int" resultMap="bookResultMap">
+        SELECT <include refid="bookAttrs"/>
+        FROM book_info
+        WHERE id = #{id}
+    </select>
+
+    <!-- 新增前应校验 Book 非空以及书名、作者、库存、价格、出版社等必填项。 -->
+    <sql id="tableField">
+        <if test="bookName != null">book_name,</if>
+        <if test="author != null">author,</if>
+        <if test="count != null">`count`,</if>
+        <if test="price != null">price,</if>
+        <if test="publish != null">publish,</if>
+        <if test="status != null">status,</if>
     </sql>
-    <sql id = "fieldValues">
+
+    <!-- int addBook(Book book); 自增主键回填到 book.id。 -->
+    <!-- 创建时间、更新时间由数据库默认值生成。 -->
+    <insert id="addBook" parameterType="org.txf.book_management.model.Book"
+            useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO book_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <include refid="tableField"/>
+        </trim>
+        VALUES
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="bookName != null">#{bookName},</if>
             <if test="author != null">#{author},</if>
@@ -43,31 +78,21 @@
             <if test="publish != null">#{publish},</if>
             <if test="status != null">#{status},</if>
         </trim>
-    </sql>
-
-    <insert id = "addBook" parameterType="org.txf.book_management.model.Book">
-        insert into book_info <include refid="tableField"></include>
-        values <include refid="fieldValues"></include>;
     </insert>
 
-    <update id = "updateBook">
-        update book_info
-        <set >
+    <!-- int updateBook(Book book); 调用前校验 id，且至少一个待更新属性非空。 -->
+    <!-- 更新时间由数据库 ON UPDATE CURRENT_TIMESTAMP 维护。 -->
+    <update id="updateBook" parameterType="org.txf.book_management.model.Book">
+        UPDATE book_info
+        <set>
             <if test="bookName != null">book_name = #{bookName},</if>
             <if test="author != null">author = #{author},</if>
             <if test="count != null">`count` = #{count},</if>
             <if test="price != null">price = #{price},</if>
             <if test="publish != null">publish = #{publish},</if>
-            <if test="status != null">status = #{status}</if>
+            <if test="status != null">status = #{status},</if>
         </set>
-        <where>
-            id = #{id}
-        </where>
+        WHERE id = #{id}
     </update>
 
-    <select id = "getBookById">
-        select <include refid="bookAttrs"></include>
-        from book_info
-        where id = #{id}
-    </select>
 </mapper>
