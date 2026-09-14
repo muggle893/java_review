@@ -36,7 +36,7 @@ public class ResponseAdvice implements ResponseBodyAdvice {
         }
 
         // 如果已经是ResultType
-        if (body instanceof RequestResult) {
+        if (body instanceof RequestResult<?>) {
             return body;
         }
         return RequestResult.success(body);
