@@ -1,0 +1,14 @@
+spring:
+  ai:
+    model:
+      embedding: none
+    openai:
+      api-key: sk-cfd7769797de4970a09cc7f8931d96fb
+      base-url: https://api.deepseek.com
+      chat:
+        completions-path: /chat/completions
+        options:
+          model: deepseek-flash
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug

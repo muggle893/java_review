@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div id="sse"></div>
+
+</head>
+<body>
+    <script>
+        let eventSource = new EventSource("/sse/retry");
+        eventSource.onmessage = function(event){
+            document.getElementById("sse").innerHTML = event.data;
+        }
+        // ⾃定义事件
+        // eventSource.addEventListener("foo", (event)=>{
+        //     document.getElementById("sse").innerHTML = event.data;
+        // });
+        // eventSource.addEventListener('end', function() {
+        // eventSource.close();
+        // });
+    </script>
+</body>
+</html>
