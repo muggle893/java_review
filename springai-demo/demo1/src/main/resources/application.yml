@@ -3,10 +3,9 @@ spring:
     model:
       embedding: none
     openai:
-      api-key: sk-cfd7769797de4970a09cc7f8931d96fb
+      api-key: sk-e6a16692ac514fcab9310eb6f144fab3
       base-url: https://api.deepseek.com
       chat:
-        completions-path: /chat/completions
         options:
           model: deepseek-flash
 logging:
