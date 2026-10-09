@@ -6,10 +6,16 @@
 </head>
 <body>
     <script>
-        let eventSource = new EventSource("/sse/retry");
+        let eventSource = new EventSource("/flux/stream");
         eventSource.onmessage = function(event){
             document.getElementById("sse").innerHTML = event.data;
+            console.log(event)
         }
+        // eventSource.addEventListener("done", function (){
+        //     eventSource.close();
+        // });
+
+
         // ⾃定义事件
         // eventSource.addEventListener("foo", (event)=>{
         //     document.getElementById("sse").innerHTML = event.data;

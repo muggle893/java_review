@@ -3,7 +3,7 @@ spring:
     model:
       embedding: none
     openai:
-      api-key: sk-e6a16692ac514fcab9310eb6f144fab3
+      api-key:
       base-url: https://api.deepseek.com
       chat:
         options:

@@ -1,6 +1,7 @@
 package org.txf.demo1.controller;
 
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
@@ -13,6 +14,7 @@ public class ChatClientController {
     public ChatClientController(ChatClient.Builder builder) {
         chatClient = builder
                 .defaultSystem("你身份是一名编程专家")
+                .defaultAdvisors(new SimpleLoggerAdvisor())
                 .build();
 
     }
@@ -48,4 +50,6 @@ public class ChatClientController {
                 .stream()
                 .content();
     }
+
+
 }
