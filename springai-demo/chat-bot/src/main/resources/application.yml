@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: chat-bot
+  ai:
+    model:
+      embedding: none
+    openai:
+      api-key: 
+      base-url: https://api.deepseek.com
+      chat:
+        options:
+          model: deepseek-flash
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug
