@@ -1,6 +1,8 @@
 server:
   port: 8081
 spring:
+  application:
+    name: product-service
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/cloud_product?characterEncoding=utf8&useSSL=false
     username: root
@@ -10,3 +12,9 @@ mybatis:
   configuration: #配置打印MyBatis⽇志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true #配置驼峰⾃动转换
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10010/eureka
+
