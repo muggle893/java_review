@@ -1,0 +1,14 @@
+spring:
+  ai:
+    openai:
+      api-key: ${qianfan-api-key}
+      base-url: https://qianfan.baidubce.com
+      chat:
+        options:
+          model: deepseek-v4.1-flash-1017
+        completions-path: /v2/chat/completions
+      image:
+        options:
+          model: musesteamer-air-image
+        imagesPath: /v2/musesteamer/images/generations
+
