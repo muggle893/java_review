@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: test-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.120.68.12:8848
+        cluster-name: SH
+        namespace: fd9f6caf-6818-4912-b9da-1057ce6cf1e9
+server:
+  port: 8080
