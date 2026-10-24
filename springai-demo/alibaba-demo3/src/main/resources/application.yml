@@ -1,0 +1,9 @@
+spring:
+  ai:
+    dashscope:
+      api-key: ${ali-api-key}
+      base-url: https://dashscope.aliyuncs.com
+
+logging:
+  charset:
+    console: UTF-8
