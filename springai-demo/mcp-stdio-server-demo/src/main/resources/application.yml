@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: mcp-client
+  ai:
+    dashscope:
+      api-key: ${ali-api-key}
+      base-url: https://dashscope.aliyuncs.com
+
+    mcp:
+      client:
+        request-timeout: 60000
+        stdio:
+          servers-configuration: classpath:/mcp/mcp-servers-config.json
+
+logging:
+  level:
+    io:
+      modelcontextprotocol:
+        client: DEBUG
+        spec: DEBUG

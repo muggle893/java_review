@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "12306-mcp": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "12306-mcp"
+      ]
+    },
+    "amap-maps": {
+      "command": "npx.cmd",
+      "args": ["-y", "@amap/amap-maps-mcp-server"],
+      "env": {
+        "AMAP_MAPS_API_KEY": ""
+      }
+    }
+  }
+}
