@@ -1,0 +1,4 @@
+org\txf\server\config\ToolConfig.class
+org\txf\server\McpServerApplication.class
+org\txf\server\service\UserInfoService.class
+org\txf\server\entity\UserInfo.class
