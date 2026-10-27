@@ -4,7 +4,7 @@ spring:
       server:
         name: user-info
         version: 1.0.0
+server:
+  port: 8088
 
-  main:
-    web-application-type: none
-    banner-mode: off
+
