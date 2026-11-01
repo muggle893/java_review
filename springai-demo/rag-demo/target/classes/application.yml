@@ -2,11 +2,31 @@ spring:
   ai:
     dashscope:
       api-key: ${ali-api-key}
-      base-url: https://dashscope.aliyuncs.com
+      base-url: https://ws-9vwgk7xu4keolyxv.cn-beijing.maas.aliyuncs.com
       embedding:
         options:
           model: text-embedding-v4
           dimensions: 2048
+      rerank:
+        options:
+          model: gte-rerank-v2
+    vectorstore:
+      pinecone:
+        index-name: spring-ai-pinecone
+        api-key: ${PINECONE-API-KEY}
+#      redis:
+#        index-name: spring-ai-index
+#        initialize-schema: true
+#        prefix: "embedding:"
+
+
+#  data:
+#    redis:
+#      host: 8.160.162.76
+#      port: 6379
+#      username: default
+#      password: ${REDIS_PASSWORD}
+#      database: 0
 logging:
   level:
     org.springframework.ai.rag.advisor: DEBUG

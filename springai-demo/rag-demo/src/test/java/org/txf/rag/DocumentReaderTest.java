@@ -2,12 +2,17 @@ package org.txf.rag;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.ai.document.Document;
+import org.springframework.ai.reader.ExtractedTextFormatter;
 import org.springframework.ai.reader.JsonReader;
 import org.springframework.ai.reader.TextReader;
 import org.springframework.ai.reader.jsoup.JsoupDocumentReader;
 import org.springframework.ai.reader.jsoup.config.JsoupDocumentReaderConfig;
 import org.springframework.ai.reader.markdown.MarkdownDocumentReader;
 import org.springframework.ai.reader.markdown.config.MarkdownDocumentReaderConfig;
+import org.springframework.ai.reader.pdf.PagePdfDocumentReader;
+import org.springframework.ai.reader.pdf.ParagraphPdfDocumentReader;
+import org.springframework.ai.reader.pdf.config.PdfDocumentReaderConfig;
+import org.springframework.ai.reader.tika.TikaDocumentReader;
 import org.springframework.ai.transformer.splitter.TokenTextSplitter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +27,7 @@ public class DocumentReaderTest {
      * 测试纯文本文件的读取
      */
     @Test
-    public void testTxtReader(@Value("classpath:/file/text.txt") Resource resource) {
+    public void testTxtReader(@Value("classpath:/file/rule.txt") Resource resource) {
         // TextReader也可以传一个url参数来构造TextReader
         TextReader textReader = new TextReader(resource);
         textReader.getCustomMetadata().put("username", "zhangsan");
@@ -96,5 +101,71 @@ public class DocumentReaderTest {
             System.out.println(document.getMetadata());
             System.out.println("------------------");
         }
+    }
+
+    /**
+     * 测试pdf文件的加载
+     */
+    @Test
+    public void testPDFDocumentReader(@Value("classpath:/file/sample1.pdf") Resource resource){
+        // 可以给PagePdfDocumentReader的构造器传一个PdfDocumentReaderConfig对象来配置Reader
+        PdfDocumentReaderConfig readerConfig = PdfDocumentReaderConfig.builder()
+                .withPageTopMargin(0)  // 用于跳过顶部页面边距
+                .withPageBottomMargin(0) // 用于跳过底部页面边距
+                .withPagesPerDocument(2)
+                .withPageExtractedTextFormatter(ExtractedTextFormatter.builder()
+                        .build())
+                .build();
+
+        // 创建PDF文件阅读器
+        PagePdfDocumentReader reader = new PagePdfDocumentReader(resource, readerConfig);
+        List<Document> documents = reader.get();
+        System.out.printf("documents: %d\n", documents.size());
+        documents.stream().forEach((doc) ->{
+            System.out.println(doc.toString());
+        });
+
+
+    }
+
+    /**
+     * 测试pdf文件的提取
+     */
+    @Test
+    public void testPDFDocumentReader2(@Value("classpath:/file/sample1.pdf") Resource resource){
+
+        // 创建PDF文件阅读器
+        ParagraphPdfDocumentReader paragraphPdfDocumentReader = new ParagraphPdfDocumentReader(resource);
+        List<Document> documents = paragraphPdfDocumentReader.get();
+        System.out.printf("documents: %d\n", documents.size());
+        documents.stream().forEach((doc) ->{
+            System.out.println(doc.toString());
+        });
+
+
+    }
+
+    /**
+     * TikaDocumentReader是一个通用的文本阅读器
+     */
+    @Test
+    public void testTikaDocumentReader(@Value("classpath:/file/tika.docx") Resource resource) {
+        TikaDocumentReader tikaDocumentReader = new TikaDocumentReader(resource);
+        List<Document> documents = tikaDocumentReader.get();
+        documents.stream().forEach((doc) ->{
+            System.out.println(doc.toString());
+        });
+    }
+
+    /**
+     * TikaDocumentReader是一个通用的文本阅读器
+     */
+    @Test
+    public void testTikaDocumentReader2(@Value("classpath:/file/ppt-sample.pptx") Resource resource) {
+        TikaDocumentReader tikaDocumentReader = new TikaDocumentReader(resource);
+        List<Document> documents = tikaDocumentReader.get();
+        documents.stream().forEach((doc) ->{
+            System.out.println(doc.toString());
+        });
     }
 }
