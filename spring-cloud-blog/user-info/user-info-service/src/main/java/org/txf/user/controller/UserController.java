@@ -7,7 +7,9 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.txf.common.pojo.Result;
 import org.txf.user.api.UserServiceApi;
+import org.txf.user.api.pojo.UserInfoRegisterRequest;
 import org.txf.user.api.pojo.UserInfoRequest;
 import org.txf.user.api.pojo.UserInfoResponse;
 import org.txf.user.api.pojo.UserLoginResponse;
@@ -17,9 +19,18 @@ import org.txf.user.service.UserService;
 @RequestMapping("/user")
 @RestController
 public class UserController implements UserServiceApi {
-
     @Autowired
     private UserService userService;
+
+
+    @RequestMapping("/register")
+    @Override
+    public Result<Integer> register(@RequestBody UserInfoRegisterRequest userInfoRegisterRequest) {
+        log.info("用户注册, {}", userInfoRegisterRequest);
+        return Result.success(userService.registerUser(userInfoRegisterRequest));
+    }
+
+
 
     @Override
     @RequestMapping("/login")

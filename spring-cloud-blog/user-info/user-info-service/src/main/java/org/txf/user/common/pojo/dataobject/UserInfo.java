@@ -16,4 +16,5 @@ public class UserInfo {
     private Byte deleteFlag;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
+    private String email;
 }

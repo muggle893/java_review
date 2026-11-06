@@ -1,6 +1,7 @@
 package org.txf.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,11 +10,14 @@ import org.txf.blog.api.pojo.BlogInfoResponse;
 import org.txf.common.exception.BlogException;
 import org.txf.common.pojo.Result;
 import org.txf.common.utils.JWTUtils;
+import org.txf.common.utils.RegexUtil;
 import org.txf.common.utils.SecurityUtil;
+import org.txf.user.api.pojo.UserInfoRegisterRequest;
 import org.txf.user.api.pojo.UserInfoRequest;
 import org.txf.user.api.pojo.UserInfoResponse;
 import org.txf.user.api.pojo.UserLoginResponse;
 import org.txf.user.common.pojo.dataobject.UserInfo;
+import org.txf.user.convert.BeanConvertor;
 import org.txf.user.mapper.UserInfoMapper;
 import org.txf.user.service.UserService;
 
@@ -21,6 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserInfoMapper userInfoMapper;
@@ -85,4 +90,35 @@ public class UserServiceImpl implements UserService {
                 .eq(UserInfo::getId, userId).eq(UserInfo::getDeleteFlag, 0));
     }
 
+    @Override
+    public Integer registerUser(UserInfoRegisterRequest user) {
+        // TODO校验密码格式
+        // 校验邮箱格式
+        if (!RegexUtil.checkEmail(user.getEmail())) {
+            throw new BlogException("邮箱格式校验错误!");
+        }
+
+        // 校验github地址格式
+        if (user.getGithubUrl() != null) {
+            if (!RegexUtil.checkUrl(user.getGithubUrl())) {
+                throw new BlogException("邮箱格式校验错误!");
+            }
+        }
+
+        // 查看数据库中是否已经有一样的用户名
+        UserInfo userInfo = selectUserInfoByName(user.getUserName());
+        if (userInfo!=null){
+            throw new BlogException("用户名已经存在!");
+        }
+
+        // 新建用户到数据库中
+        UserInfo newUser = BeanConvertor.convertUserInfoEncrypt(user);
+        int res = userInfoMapper.insert(newUser);
+        if (res > 0) {
+            return newUser.getId();
+        } else {
+            log.error("用户注册失败!");
+            throw new BlogException("用户注册失败!");
+        }
+    }
 }

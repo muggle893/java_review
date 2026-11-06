@@ -18,6 +18,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import org.txf.common.pojo.Result;
 import org.txf.common.utils.JWTUtils;
+import org.txf.gateway.config.AuthWhiteNameProperties;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
@@ -29,7 +30,10 @@ public class LoginGlobalFilter implements GlobalFilter, Ordered {
     private ObjectMapper objectMapper;
 
     // 白名单
-    private static List<String> passTable = List.of("/user/login", "/user/register");
+    private List<String> passTable;
+
+    @Autowired
+    private AuthWhiteNameProperties authWhiteName;
 
     @SneakyThrows
     @Override
@@ -39,7 +43,7 @@ public class LoginGlobalFilter implements GlobalFilter, Ordered {
         ServerHttpResponse response = exchange.getResponse();
         String path = request.getURI().getPath();
         // 在白名单中就放行
-        if (passTable.contains(path)) {
+        if (authWhiteName.getUrls().contains(path)) {
             return chain.filter(exchange);
         }
 
