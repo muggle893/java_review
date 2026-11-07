@@ -9,9 +9,7 @@ import org.txf.blog.api.BlogServiceApi;
 import org.txf.blog.api.pojo.BlogInfoResponse;
 import org.txf.common.exception.BlogException;
 import org.txf.common.pojo.Result;
-import org.txf.common.utils.JWTUtils;
-import org.txf.common.utils.RegexUtil;
-import org.txf.common.utils.SecurityUtil;
+import org.txf.common.utils.*;
 import org.txf.user.api.pojo.UserInfoRegisterRequest;
 import org.txf.user.api.pojo.UserInfoRequest;
 import org.txf.user.api.pojo.UserInfoResponse;
@@ -27,8 +25,14 @@ import java.util.Map;
 @Service
 @Slf4j
 public class UserServiceImpl implements UserService {
+    private static final String USER_PREFIX = "user";
+    private static final long EXPIRE_TIME = 14 * 24 * 60 * 60 * 1000; //设置2周过期
+
     @Autowired
     private UserInfoMapper userInfoMapper;
+
+    @Autowired
+    private Redis redis;
 
     @Autowired
     private BlogServiceApi blogServiceApi;
@@ -36,7 +40,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserLoginResponse login(UserInfoRequest user) {
         //验证账号密码是否正确
-        UserInfo userInfo = selectUserInfoByName(user.getUserName());
+        UserInfo userInfo = queryUserInfoByName(user.getUserName());
         if (userInfo==null || userInfo.getId()==null){
             throw new BlogException("用户不存在");
         }
@@ -81,10 +85,36 @@ public class UserServiceImpl implements UserService {
         return userInfoResponse;
     }
 
-    public UserInfo selectUserInfoByName(String userName) {
-        return userInfoMapper.selectOne(new LambdaQueryWrapper<UserInfo>()
-                .eq(UserInfo::getUserName, userName).eq(UserInfo::getDeleteFlag, 0));
+    public UserInfo queryUserInfoByName(String userName) {
+        // 先从redis中获取用户信息
+        // 从redis获取信息的时候可能失败抛出异常这里要处理一下
+        // 从缓存查询失败的时候打一下日志就行了
+        UserInfo userInfo = null;
+        try {
+            String key = keyBuilder(userName);
+            if (redis.hasKey(key)) {
+                log.info("从redis获取用户信息, 用户名:{}", userName);
+                String objStr = redis.get(key);
+                userInfo = JSONUtils.toObject(objStr, UserInfo.class);
+                log.info("获取到的用户信息：{}", userInfo);
+            }
+        } catch (Exception e) {
+            log.warn("从redis查询用户信息失败，用户名：{}", userName, e);
+        }
+
+        if (userInfo == null){
+            userInfo = userInfoMapper.selectOne(new LambdaQueryWrapper<UserInfo>()
+                    .eq(UserInfo::getUserName, userName).eq(UserInfo::getDeleteFlag, 0));
+        }
+        return userInfo;
     }
+
+    public UserInfo selectUserInfoByName(String userName) {
+          return userInfoMapper.selectOne(new LambdaQueryWrapper<UserInfo>()
+                    .eq(UserInfo::getUserName, userName).eq(UserInfo::getDeleteFlag, 0));
+
+    }
+
     private UserInfo selectUserInfoById(Integer userId) {
         return userInfoMapper.selectOne(new LambdaQueryWrapper<UserInfo>()
                 .eq(UserInfo::getId, userId).eq(UserInfo::getDeleteFlag, 0));
@@ -107,18 +137,36 @@ public class UserServiceImpl implements UserService {
 
         // 查看数据库中是否已经有一样的用户名
         UserInfo userInfo = selectUserInfoByName(user.getUserName());
-        if (userInfo!=null){
+        if (userInfo != null){
             throw new BlogException("用户名已经存在!");
         }
 
         // 新建用户到数据库中
         UserInfo newUser = BeanConvertor.convertUserInfoEncrypt(user);
-        int res = userInfoMapper.insert(newUser);
-        if (res > 0) {
-            return newUser.getId();
-        } else {
-            log.error("用户注册失败!");
-            throw new BlogException("用户注册失败!");
+        int res = 0;
+        try {
+            res = userInfoMapper.insert(newUser);
+        } catch (Exception e) {
+            log.error("数据库插入失败", e);
+            throw new BlogException("用户插入数据库失败!");
         }
+
+        if (res == 0) {
+            throw new BlogException("用户注册失败");
+        }
+
+        try {
+            // 在返回用户id之前我们需要把用户的信息存到redis中
+            String jsonStr = JSONUtils.toJSON(newUser);
+            redis.set(keyBuilder(newUser.getUserName()), jsonStr, EXPIRE_TIME);
+        } catch (Exception e) {
+            log.warn("注册时用户信息写入redis失败.");
+        }
+        return newUser.getId();
     }
+
+    private String keyBuilder(String key) {
+        return redis.keyBuilder(USER_PREFIX, key);
+    }
+
 }

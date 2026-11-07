@@ -2,6 +2,12 @@ server:
   port: 8080
 
 spring:
+  data:
+    redis:
+      host: localhost
+      port: 16379
+      timeout: 60s
+      password: ${REDIS_PASSWORD}
   application:
     name: user-service
   datasource:
@@ -14,10 +20,13 @@ spring:
     nacos:
       discovery:
         server-addr: 8.160.162.76:8848
+
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
 logging:
   file:
     name: blog-service.log
