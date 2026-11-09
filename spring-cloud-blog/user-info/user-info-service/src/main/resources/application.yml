@@ -2,24 +2,57 @@ server:
   port: 8080
 
 spring:
+  mail:
+    # 指定邮件服务器地址
+    host: smtp.qq.com
+    # 登录账户
+    username: 1786772884@qq.com
+    # 登录密码
+    password:
+    # 默认编码
+    default-encoding: UTF-8
+    # 使用的协议
+    protocol: smtps
+    properties:
+      personal: "晓峰博客系统"
+
+  rabbitmq:
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    username:
+    password:
+    virtual-host: blog-dev
+    listener:
+      simple:
+        acknowledge-mode: manual
+
   data:
     redis:
-      host: localhost
-      port: 16379
+      host: ${redis.host}
+      port: ${redis.port}
       timeout: 60s
-      password: ${REDIS_PASSWORD}
+      password:
+      lettuce:
+       pool:
+        max-active: 8 #允许最⼤连接数
+        max-idle: 8 #最⼤空闲连接数, 默认8
+        min-idle: 0 #最⼩空闲连接数
+        max-wait: 5s #请求获取连接等待时间
+
   application:
     name: user-service
+
+
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/spring_cloud_user?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: 123456
+    username: ${mysql.username}
+    password: ${mysql.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   cloud:
     nacos:
       discovery:
-        server-addr: 8.160.162.76:8848
+        server-addr: ${nacos.address}
 
 mybatis-plus:
   configuration:
@@ -29,4 +62,46 @@ mybatis-plus:
 
 logging:
   file:
-    name: blog-service.log
+    name: user-service.log
+
+---
+# 开发环境
+spring:
+  config:
+    activate:
+      on-profile: dev
+nacos:
+  address: 8.160.162.76:8848
+
+mysql:
+  username: root
+  password: 123456
+
+rabbitmq:
+  host: 8.160.162.76
+  port: 5672
+
+redis:
+  host: localhost
+  port: 16379
+
+---
+# 生产环境
+spring:
+  config:
+    activate:
+      on-profile: prod
+nacos:
+  address: 127.0.0.1:8848
+
+mysql:
+  username: test
+  password: Aa123..#hhh
+
+rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+
+redis:
+  host: 127.0.0.1
+  port: 6379

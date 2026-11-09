@@ -1,7 +1,9 @@
 package org.txf.user.service.impl;
 
+import com.alibaba.fastjson2.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,7 @@ import org.txf.user.api.pojo.UserInfoRequest;
 import org.txf.user.api.pojo.UserInfoResponse;
 import org.txf.user.api.pojo.UserLoginResponse;
 import org.txf.user.common.pojo.dataobject.UserInfo;
+import org.txf.user.constant.Constants;
 import org.txf.user.convert.BeanConvertor;
 import org.txf.user.mapper.UserInfoMapper;
 import org.txf.user.service.UserService;
@@ -36,6 +39,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private BlogServiceApi blogServiceApi;
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     @Override
     public UserLoginResponse login(UserInfoRequest user) {
@@ -129,9 +135,9 @@ public class UserServiceImpl implements UserService {
         }
 
         // 校验github地址格式
-        if (user.getGithubUrl() != null) {
+        if (user.getGithubUrl() != null && user.getGithubUrl().trim().length() > 0) {
             if (!RegexUtil.checkUrl(user.getGithubUrl())) {
-                throw new BlogException("邮箱格式校验错误!");
+                throw new BlogException("github地址格式校验错误!");
             }
         }
 
@@ -155,9 +161,18 @@ public class UserServiceImpl implements UserService {
             throw new BlogException("用户注册失败");
         }
 
+        // 发送用户信息到mq中
+        try {
+            String jsonStr = JSON.toJSONString(newUser);
+            rabbitTemplate.convertAndSend(Constants.USER_EXCHANGE_NAME, "", jsonStr);
+        } catch (Exception e) {
+            log.warn("用户信息发送到mq失败.");
+        }
+
+
         try {
             // 在返回用户id之前我们需要把用户的信息存到redis中
-            String jsonStr = JSONUtils.toJSON(newUser);
+            String jsonStr = JSON.toJSONString(newUser);
             redis.set(keyBuilder(newUser.getUserName()), jsonStr, EXPIRE_TIME);
         } catch (Exception e) {
             log.warn("注册时用户信息写入redis失败.");
