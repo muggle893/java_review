@@ -1,0 +1,45 @@
+server:
+  port: 8081
+
+# 用来决定是否初始化RAG知识库
+data:
+  need-load: false
+
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 16379
+      password: ${REDIS_PASSWORD}
+
+
+  application:
+    name: chat-bot-milktea
+
+  ai:
+    vectorstore:
+      redis:
+        initialize-schema: true
+        index-name: chat-bot-milktea
+        prefix: "milktea:rag:"
+
+    dashscope:
+      api-key: ${ali-api-key}
+      chat:
+        base-url: https://ws-9vwgk7xu4keolyxv.cn-beijing.maas.aliyuncs.com
+        options:
+          model: qwen3.8-flash
+          multi-model: true
+
+      embedding:
+        base-url: https://ws-9vwgk7xu4keolyxv.cn-beijing.maas.aliyuncs.com
+        options:
+          model: text-embedding-v4
+          dimensions: 2048
+      rerank:
+        options:
+          top-n: 20
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug
