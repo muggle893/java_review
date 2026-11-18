@@ -11,9 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 public class GetConfigController {
     @Value("${data.env}")
     private String env;
+    @Value("${mysql.username}")
+    private String username;
+    @Value("${mysql.password}")
+    private String password;
 
     @RequestMapping("/env")
     public String getEnv() {
         return env;
+    }
+
+    @RequestMapping("/mysql")
+    public String getMysqlInfo() {
+        return username + "\n" + password;
     }
 }
