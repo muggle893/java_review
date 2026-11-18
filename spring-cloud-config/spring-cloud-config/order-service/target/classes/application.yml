@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  rabbitmq:
+    virtual-host: blog-dev
+    port: 5672
+    host: 8.160.162.76
+    username: admin
+    password: admin123
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/cloud_order?characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# 设置 Mybatis 的 xml 保存路径
+mybatis:
+  configuration: # 配置打印 MyBatis 执行的 SQL
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true  #自动驼峰转换
+
+logging:
+  pattern:
+    console: '%d{HH:mm:ss.SSS} %c %M %L [%thread] %m%n'
+    file: '%d{HH:mm:ss.SSS} %c %M %L [%thread] %m%n'
+
+
+#需要开启的端点, 这⾥主要⽤到的是refresh端点, 只开启这⼀个就可以, 为了⽅便, 可以开启所有端点, 除了shutdown端点
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"

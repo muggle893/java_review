@@ -1,0 +1,23 @@
+server:
+  port: 7070
+spring:
+  application:
+    name: config-server
+  rabbitmq:
+    virtual-host: blog-dev
+    port: 5672
+    host: 8.160.162.76
+    username: admin
+    password: admin123
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/muggle893/config #配置⽂件Git 地址
+          default-label: main #配置⽂件分⽀
+          search-paths: config #配置⽂件所在根⽬录
+          proxy:
+            http:
+              host: 127.0.0.1
+              port: 7890
+
